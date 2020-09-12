@@ -1,0 +1,13 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+    /* PALETTE COLORS */
+    --background-color: #313131;
+    --base-font-color: white;
+}
+
+html {
+    background-color: var(--background-color);
+}
