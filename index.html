@@ -13,20 +13,18 @@
 
 <body>
     <header>
-        <div class="studentName">
-            <h1>Bernard L. Bailey III</h1>
-        </div>
-        <div class="studentPhoto">
-            <img src="images/student.jpg" alt="">
+        <div class="student block">
+            <img src="images/student.jpg" alt="student_photo" class="studentPhoto">
+            <h1>Bernard L. Bailey III</h1>            
         </div>
     </header>
-
     <main>
         <div>
-            <h2>WDD 230-06: Assignment Portal</h2>
+            <h2 class="title">WDD 230-06: Assignment Portal</h2>
+            <hr class="title">
         </div>
         <div>
-            <ul>
+            <ul class="lessons">
                 <li>Lesson 02: <a href="">Assignment Link</a></li>
                 <li>Lesson 03: <a href="">Assignment Link</a></li>
                 <li>Lesson 04: <a href="">Link</a> | <a href="">Link</a></li>
@@ -35,11 +33,16 @@
     </main>
 
     <footer>
-        <div class="credit">
-            <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a
-                    href="https://www.byui.edu/online">BYUI Online Learning</a></p>
+        <div class="block">
+            <div class="credit">
+                <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a
+                        href="https://www.byui.edu/online">BYUI Online Learning</a></br>
+                   <span id="lastUpdated" class="lastUpdated"></span>
+                </p>
+            </div>
+            
         </div>
-        <div id="lastUpdated" class="lastUpdated"></div>
+        
     </footer>
 </body>
 
