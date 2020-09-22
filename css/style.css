@@ -17,8 +17,7 @@
 
     /* MEASUREMENTS */
     --rounded-edges-hidden: 1em;
-    --rounded-edges-difference: 0.2em;
-    --rounded-edges-block: calc(var(--rounded-edges-hidden) - var(--rounded-edges-difference));
+    --rounded-edges-block: calc(var(--rounded-edges-hidden) - 0.2em);
 }
 
 html {
