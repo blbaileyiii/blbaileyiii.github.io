@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    max-width: 85em; 
+    max-width: 45em; 
     margin: 0 auto;
     background-color: var(--secondary-background-color);
     border-radius: var(--rounded-edges-hidden); 
@@ -29,6 +29,7 @@ footer {
 
 .block {
     background-color: var(--block-background-color);
+    background-image: var(--background-gradient);
     font-family: var(--block-font);
     color: var(--block-font-color);     
 }

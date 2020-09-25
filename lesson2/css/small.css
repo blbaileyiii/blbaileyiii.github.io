@@ -17,6 +17,7 @@ main {
 
 h1, h2 {
     background-color: var(--block-background-color);
+    background-image: var(--background-gradient);
     color: var(--block-font-color);
     font-family: var(--block-font);    
     padding: 0.5em;
@@ -58,6 +59,7 @@ figure {
 
 footer {
     background-color: var(--block-background-color);
+    background-image: var(--background-gradient);
     font-family: var(--base-font);
     color: var(--block-font-color); 
     text-align: center;

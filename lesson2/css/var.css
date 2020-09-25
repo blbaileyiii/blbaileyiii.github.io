@@ -15,6 +15,9 @@
     --base-font-color: #313131;
     --last-updated-font-color: yellow;
 
+    /* GRADIENT */
+    --background-gradient: linear-gradient(to bottom right, var(--block-background-color), red);
+
     /* MEASUREMENTS */
     --rounded-edges-hidden: 1em;
     --rounded-edges-visible-diff: 0.5em;
