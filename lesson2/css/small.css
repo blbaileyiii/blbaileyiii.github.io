@@ -58,6 +58,7 @@ footer {
     text-align: center;
     margin: 1em 0em;;
     padding: 0.1em;
+    font-size: 0.85em;
 }
 
 
@@ -65,3 +66,6 @@ footer a:link, footer a:visited {
     color: var(--block-font-color);
 }
 
+.lastUpdated {
+    color: var(--last-updated-font-color);
+}

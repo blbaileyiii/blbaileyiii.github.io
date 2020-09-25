@@ -6,4 +6,12 @@
     .column:nth-last-child(1):nth-last-child(odd) {
         grid-column: span 1;
     }
+
+    footer {
+        font-size: 1em;
+    }
+
+    .lastUpdated {
+        font-size: 0.85em;
+    }
 }
