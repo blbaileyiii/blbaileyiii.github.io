@@ -1,0 +1,21 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+    /*  FONTS  */
+    --block-font: 'Raleway',Helvetica, sans-serif;
+    --base-font: 'Cinzel Decorative', serif;
+
+    /* PALETTE COLORS */
+    --primary-background-color: #313131;
+    --secondary-background-color: #F3F9D2;
+    --block-background-color: #731DD8;
+    --block-font-color: white;
+    --base-font-color: #313131;
+    --last-updated-font-color: yellow;
+
+    /* MEASUREMENTS */
+    --rounded-edges-hidden: 1em;
+    --rounded-edges-block: calc(var(--rounded-edges-hidden) - 0.2em);
+}

@@ -1,0 +1,48 @@
+html {
+    background-color: var(--primary-background-color);
+    color: var(--base-font-color);
+    font-family: var(--base-font);
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    gap: 1em 1em;
+}
+
+h1, h2 {
+    background-color: var(--block-background-color);
+    color: var(--block-font-color);
+    font-family: var(--block-font);    
+    padding: 0.5em;
+}
+
+h2 {
+    margin: 0em;
+}
+
+figure {
+    margin: 1em 0em;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.column {
+    background-color: var(--secondary-background-color);
+}
+
+.column .content {
+    padding: 1em;
+}
+
+.content-description {
+    text-indent: 1.5em;
+    text-align: justify;
+    padding: 1em;
+    background: rgba(49, 49, 49, 0.05);
+}
+
+.phone.screen-shot, .content-description {
+    border-radius: 0.5em;
+}
+
