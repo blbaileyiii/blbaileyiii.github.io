@@ -29,6 +29,11 @@ figure {
 
 .column {
     background-color: var(--secondary-background-color);
+    border-radius: var(--rounded-edges-hidden) var(--rounded-edges-hidden) 0em 0em;
+}
+
+.column h2 {
+    border-radius: var(--rounded-edges-block) var(--rounded-edges-block) 0em 0em;
 }
 
 .column .content {
@@ -44,5 +49,19 @@ figure {
 
 .phone.screen-shot, .content-description {
     border-radius: 0.5em;
+}
+
+footer {
+    background-color: var(--block-background-color);
+    font-family: var(--base-font);
+    color: var(--block-font-color); 
+    text-align: center;
+    margin: 1em 0em;;
+    padding: 0.1em;
+}
+
+
+footer a:link, footer a:visited {
+    color: var(--block-font-color);
 }
 
