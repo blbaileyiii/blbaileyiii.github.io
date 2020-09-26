@@ -14,9 +14,10 @@
     --block-font-color: white;
     --base-font-color: #313131;
     --last-updated-font-color: yellow;
+    --secondary-color-theme: red;
 
     /* GRADIENT */
-    --background-gradient: linear-gradient(to bottom right, var(--block-background-color), red);
+    --background-gradient: linear-gradient(to bottom right, var(--block-background-color), var(--secondary-color-theme));
 
     /* MEASUREMENTS */
     --rounded-edges-hidden: 1em;
