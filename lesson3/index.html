@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">    
+    <link rel="stylesheet" href="css/small.css">
+    <title>Elementary Weather</title>
+    <meta name="description"
+        content="To help users plan trips according to the weather.">
+</head>
+
+<body>
+    <header>
+        <img src="img/iconfinder_weather-04_1530389_small.png" alt="site-logo">
+        <div>
+            <h1>Elementary Weather</h1>
+            <h2>Easy to Read - Easy to Plan</h2>
+        </div>        
+    </header>
+
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="target-audience.html">Target Audience</a></li>
+                <li><a href="color-scheme.html">Color Scheme</a></li>
+                <li><a href="typography.html">Typography</a></li>
+            </ul>
+        </nav>        
+        <div class="content">
+            <h2>Purpose</h2>
+            <p>
+                The purpose of this site is to give clear and easy to read weather data. The data should be easy enough to understand that an elementary school child can understand what weather to expect through out the day.
+            </p>
+        </div>
+        <div class="content">
+            <h2>Site Logo</h2>
+            <img src="img/iconfinder_weather-04_1530389_medium.png" alt="site-logo">
+        </div>
+        <div class="content">
+            <h2>Domain</h2>
+            <p>elementaryweather.com</p>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="credit block">
+            <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a>
+               <br><span id="lastUpdated" class="lastUpdated"></span>
+            </p>
+        </div>
+    </footer>
+    <script>
+        let currDate = new Date();
+        let currYear = currDate.getFullYear();
+        let lastUpdated = "Last Updated: " + document.lastModified;
+
+        document.getElementById('currYear').textContent = currYear;
+        document.getElementById('lastUpdated').innerHTML = lastUpdated;
+    </script>
+</body>
+
+</html>

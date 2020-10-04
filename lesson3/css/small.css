@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+html {
+    background-color: #050517;
+    font-family: 'Playfair Display', Helvetica, serif;
+    font-weight: 700;
+}
+
+body {    
+    background-color: #F2F5DE;
+    width: 70rem;
+    margin: 0 auto;
+    color: #050517;   
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 30rem;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+header > * {
+    align-self: center;    
+}
+
+h1, h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 500;
+}
+
+header h2 {
+    margin-top: -0.75em;
+    background-color: #F2F5DE;
+}
+
+h2 {
+    background-color: #4C8577; 
+    padding: 0.5em 1em;     
+}
+
+.content p{
+    padding: 0.5em 1em;     
+}
+
+nav {
+    background-color: #47B6FF;
+    text-align: center;
+    box-shadow: 0 2px 15px darkgray;
+}
+
+nav ul {
+    list-style: none;   
+    display: flex; 
+    overflow: hidden;
+    padding-inline-start: 0;
+}
+
+nav ul li {
+    flex: 1 1 100%;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #050517;
+}
+
+nav ul a:hover {
+    text-decoration: none;
+    background-color: #CF5C36;
+    padding: 1em;
+    color: #F2F5DE;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th, td {
+    border-style:solid;
+    border-width:2px;
+    padding:1em;
+    border-color: #050517;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 0.1em;
+}
+
+footer hr {
+    border: 3px solid #050517;
+}
