@@ -58,8 +58,8 @@ nav {
 nav ul {
     list-style: none;   
     display: flex; 
-    overflow: hidden;
-    padding-inline-start: 0em;
+    overflow: hidden;    
+    padding-inline-start: 0px;
 }
 
 nav ul li {

@@ -1,0 +1,10 @@
+@media only screen and (min-width: 90em){
+
+    .header-box {
+        font-size: 1.75em;
+    }
+
+    .navigation {
+        font-size: 1.75em;
+    }
+}
