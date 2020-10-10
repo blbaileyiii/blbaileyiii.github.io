@@ -7,4 +7,8 @@
     .navigation {
         font-size: 1.75em;
     }
+
+    main, footer {
+        width: 90%;
+    }
 }
