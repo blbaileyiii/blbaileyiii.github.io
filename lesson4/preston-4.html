@@ -25,11 +25,7 @@
     </header>
     <nav>
         <ul class="justify-center navigation">
-            <li>                
-                <a class="ham" href="#">
-                    Menu                  
-                </a>
-            </li>
+            <li><a class="ham" id="toggleMenu" href="#">☰ Menu</a></li>
             <li><a href="">Home</a></li>
             <li><a href="">Preston</a></li>
             <li><a href="">Soda Springs</a></li>
@@ -111,10 +107,29 @@
         const hambutton = document.querySelector('.ham');
         const mainnav = document.querySelector('.navigation')
 
-        hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive')}, false);
+        //hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive')}, false);
+        hambutton.addEventListener('click', toggleMenuTxt, false);
+
+        function toggleMenuTxt(x) {
+            mainnav.classList.toggle('responsive')
+            var x = document.getElementById("toggleMenu");
+            if (x.innerHTML === "☰ Menu" || x.innerHTML == "&#9776; Menu") {
+                x.innerHTML = "✖ Close";
+            } else {
+                x.innerHTML = "☰ Menu";
+            }
+        }
 
         // To solve the mid resizing issue with responsive class on
-        window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('responsive')};
+        window.onresize = toggleMenuResize;
+        //window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('responsive')};
+
+        function toggleMenuResize(x) {
+            if (window.innerWidth > 760) {
+                mainnav.classList.remove('responsive');
+                document.getElementById("toggleMenu").innerHTML = "☰ Menu";
+            }            
+        }
 
         /*** Programming Notes **************************************
         Arrow Functions - es6 syntactically compact alternative to a regular function expression
