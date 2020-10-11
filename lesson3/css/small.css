@@ -58,7 +58,7 @@ nav {
 nav ul {
     list-style: none;   
     display: grid; 
-    grid-template-columns: 1fr);   
+    grid-template-columns: 1fr;   
     padding-inline-start: 0px;
 }
 
