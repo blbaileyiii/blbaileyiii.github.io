@@ -9,7 +9,7 @@ html {
 
 body {    
     background-color: #F2F5DE;
-    width: 70rem;
+    width: 40rem;
     margin: 0 auto;
     color: #050517;   
 }
@@ -57,8 +57,8 @@ nav {
 
 nav ul {
     list-style: none;   
-    display: flex; 
-    overflow: hidden;    
+    display: grid; 
+    grid-template-columns: 1fr);   
     padding-inline-start: 0px;
 }
 
