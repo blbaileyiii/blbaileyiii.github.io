@@ -231,7 +231,7 @@ article p, article h4{
 }
 
 article img {
-    float: clear;
+    float: none;
     margin: 1.5em;
     border: 8px double #47B6FF;
 }
