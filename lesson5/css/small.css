@@ -83,7 +83,17 @@ nav {
 
 .navigation a:hover, #active a:hover {
     color: #F2F5DE;
-    background-color: #CF5C36;
+    background-color: #CF5C36;    
+    animation: glow 1s ease-out infinite alternate; 
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #F2F5DE00;
+    }
+    to {
+        text-shadow: 0 0 15px #F2F5DEff;
+    }
 }
 
 #active {

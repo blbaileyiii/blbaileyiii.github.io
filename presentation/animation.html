@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">  
+    <title>WD230 Student Presentation: CSS Keyframe Animations</title>
+</head>
+<body>
+  <header>
+    <h1 id="title">CSS Keyframe Animations</h1>
+  </header>
+  <main>
+    <div class="flex-container">
+      <article>
+        <h2>Presentation</h2>
+        <figure>
+          <video width="480" height="270" controls>
+            <source src="video/css_animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>&copy;css keyframe animation presentation - B L Bailey III</figcaption>
+        </figure>
+        <p>
+            <a href="example.html" target="_blank">Example Page from Video</a>
+            <br>Use developer tools to view the html and css for this page.
+        </p>
+        <p>
+            <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">w3schools.com: CSS Animations</a>
+            <br>Indepth look at all the key:value pairs needed to set up the animation declaration. Note: It includes additional properties, as I demonstrated the shorthand version. It does not cover the multiple animations scenario that I covered.
+        </p>
+        <p>
+            <a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp" target="_blank">w3schools.com: CSS @keyframes Rule</a>
+            <br>It covers most of what I covered, though it doesn't a unique style of animation shown here:
+        </p>
+        <pre>
+            <code>
+                @keyframes glow {
+                    from {
+                        text-shadow: 0 0 5px #ffffff00, 0 0 10px #000000dd;
+                    }
+                    to {
+                        text-shadow: 0 0 10px #000000dd, 0 0 20px #000000ff;
+                    }
+                }
+            </code>
+        </pre>
+        <p>In this example it is a little confusing but the first from statement will transition to the first to statement, then it will go to the second from statement and then the second to statement.</p>
+        <p>What happens is it transitions from white fully transparent, to black half-transparent, and then continues from black half-transparent to black opaque.</p>
+        <p>I wanted to point it out since it doesn't really showcase that feature.</p>        
+      </article> 
+      
+    </div>
+  </main>
+  <footer class="content">
+    <div class="justify bar center-text">
+        <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a>
+           <br><span id="lastUpdated" class="lastUpdated"></span>
+        </p>
+    </div>
+</footer>
+<script src="js/js.js"></script>
+</body>
+</html>
