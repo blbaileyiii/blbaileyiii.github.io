@@ -54,10 +54,5 @@ if (currDay == 5) {
     }
 }
 
-/*** Programming Notes **************************************
-Arrow Functions - es6 syntactically compact alternative to a regular function expression
-see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-or https://www.w3schools.com/js/js_arrow_function.asp
-
-classList property - https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-*/ 
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+WebFont.load({google: {families: ["Abril Fatface", "Playfair+Display"]}});
