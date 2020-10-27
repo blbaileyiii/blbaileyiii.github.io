@@ -27,6 +27,11 @@ footer {
     text-align: center;
 }
 
+#blank {
+    list-style-type: none;
+    min-height: 1em;
+}
+
 .block {
     background-color: var(--block-background-color);
     background-image: var(--background-gradient);
