@@ -1,0 +1,43 @@
+@media only screen and (min-width: 60em) {
+    #social {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #social li {
+        padding: 0.25em;
+    }
+
+    .contact-box {
+        flex-direction: row;
+    }
+
+    .contact-box img {
+        order: 1;
+    }
+
+    .weather-summary-box {
+        position: relative;
+        overflow: hidden;  
+    }
+    
+    .weather-summary {
+        position: absolute;
+        top: 1em;
+        left: 2em;
+        width: 88%;
+        max-width: 20em;
+    }
+
+    .weather-summary-table {
+        margin: auto;            
+    }
+
+    article {
+        padding-top: 0;
+    }
+
+    article img {
+        float: right;
+    }
+}

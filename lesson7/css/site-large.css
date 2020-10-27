@@ -1,0 +1,16 @@
+@media only screen and (min-width: 90em){
+
+    /* ALL PAGES */
+    
+    .header-box {
+        font-size: 1.75em;
+    }
+
+    .navigation {
+        font-size: 1.75em;
+    }
+
+    main, footer {
+        width: 90%;
+    }
+}

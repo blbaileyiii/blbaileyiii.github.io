@@ -1,0 +1,33 @@
+main {
+    display: grid;
+    grid-template-columns: minmax(256px, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+main .header {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+picture img[data-src] {
+    filter: blur(0.2em);
+}
+
+picture img {
+    max-width: 100%;
+    height: auto;
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+
+figure {
+    box-shadow: 4px 4px 5px 1px #47B6FF;
+    background: #FFFFFF;
+}
+
+figcaption {
+    padding: 1em;
+}
