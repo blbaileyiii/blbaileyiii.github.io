@@ -33,7 +33,7 @@ function preloadSource(source) {
 
 const picOptions = {
     threshold: 0,
-    rootMargin: "0px 0px 500px 0px"
+    rootMargin: "0px 0px 750px 0px"
 };
 
 const picObserver = new IntersectionObserver((entries, imgObserver) => {
