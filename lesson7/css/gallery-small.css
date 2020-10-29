@@ -21,11 +21,13 @@ picture img {
     height: auto;
     filter: blur(0em);
     transition: filter 0.5s;
+    border-radius: 15px 15px 0 0;
 }
 
 figure {
     box-shadow: 4px 4px 5px 1px #47B6FF;
     background: #FFFFFF;
+    border-radius: 15px;
 }
 
 figcaption {
