@@ -70,3 +70,7 @@ footer a:link, footer a:visited {
     color: var(--last-updated-font-color);
     font-size: 0.85em;
 }
+
+li {
+    margin: 0.25em;
+}
