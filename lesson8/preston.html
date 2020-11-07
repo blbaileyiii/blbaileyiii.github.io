@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css"> 
+    <link rel="stylesheet" href="css/site-small.css">    
+    <link rel="stylesheet" href="css/site-medium.css">
+    <link rel="stylesheet" href="css/site-large.css">   
+    <link rel="stylesheet" href="css/preston-small.css">    
+    <link rel="stylesheet" href="css/preston-medium.css">
+    <link rel="stylesheet" href="css/preston-large.css">
+    <title>Elementary Weather</title>
+    <meta name="description"
+        content="To help users plan trips according to the weather.">
+</head>
+
+<body>
+    <aside class="banner-friday center-text">
+        <p>Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</p>
+    </aside>
+    <header>
+        <div class="justify-center header-box">
+            <img    src="images/iconfinder_weather256w.png"    
+                    sizes="(max-width: 90em) 128px, (min-width: 90em) 256px"
+                    srcset="images/iconfinder_weather128w.png 128w,
+                            images/iconfinder_weather256w.png 256w"
+                    alt="site-logo">
+            <div class="center-text">
+                <h1 class="shadow header-h1">Elementary Weather</h1>
+                <div class="header-div">Easy to Read - Easy to Plan</div>
+            </div>
+        </div>        
+    </header>
+    <nav>
+        <ul class="justify-center navigation">
+            <li><a class="ham" id="toggleMenu" href="#">☰ Menu</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" id="active">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>        
+    </nav>
+    <main>
+        <h2 class="content">Preston Idaho</h2>        
+        <div class="justify-center content weather-summary-box">            
+            <img    id="hero-img" class="justify-center"
+                    src="images/wdd230_image_franklin_1800w.webp"    
+                    sizes="100vw"
+                    srcset="images/wdd230_image_franklin_800w.webp 800w,
+                            images/wdd230_image_franklin_1280w.webp 1280w,
+                            images/wdd230_image_franklin_1800w.webp 1800w"
+                    alt="hero">
+            <div class="weather-summary">
+                <h3>Weather Summary</h3>
+                <table class="weather-summary-table">
+                    <tr>
+                        <td>Currently:</td>
+                        <td>Sunny</td>
+                    </tr>
+                    <tr>
+                        <td>High:</td>
+                        <td><span id="weather-summary-temp">42</span> °F</td>
+                    </tr>
+                    <tr>
+                        <td>Wind Speed:</td>
+                        <td><span id="weather-summary-windspeed">5</span> mph</td>
+                    </tr>
+                    <tr>
+                        <td>Wind Chill:</td>
+                        <td><span id="weather-summary-windchill"></span> °F</td>
+                    </tr>
+                    <tr>
+                        <td>Humidity:</td>
+                        <td><span id="weather-summary-humidity">69</span>%</td>
+                    </tr>                    
+                </table>
+            </div>            
+        </div>
+        <div class="justify-center content five-day">
+            <h3>Five Day Forecast</h3>
+            <ul id="five-day-flex" class="justify-center">
+                <li>
+                    <p>MON</p>
+                    <img src="images/iconfinder_weather64w.png" alt="day1">
+                    <p>89°F</p>
+                </li>
+                <li>
+                    <p>TUE</p>
+                    <img src="images/iconfinder_weather64w.png" alt="day2">
+                    <p>87°F</p>
+                </li>
+                <li>
+                    <p>WED</p>
+                    <img src="images/iconfinder_weather64w.png" alt="day3">
+                    <p>78°F</p>
+                </li>
+                <li>
+                    <p>THU</p>
+                    <img src="images/iconfinder_weather64w.png" alt="day4">
+                    <p>75°F</p>
+                </li>
+                <li>
+                    <p>FRI</p>
+                    <img src="images/iconfinder_weather64w.png" alt="day5">
+                    <p>72°F</p>
+                </li>
+            </ul>
+        </div>
+        <article class="justify-center content article">
+            <div class="center-text">
+                <img src="images/pexels-lisa-fotios-730256-400w.webp" alt="article">
+            </div>            
+            <h3>Founder's Day</h3>
+            <h4>B L Bailey III</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo eu ante vitae sollicitudin. Nullam malesuada urna lectus, non luctus metus iaculis at. Cras pulvinar felis non pulvinar volutpat. Quisque id lacus eget augue pulvinar hendrerit. Aliquam gravida ipsum justo, nec malesuada leo imperdiet nec. Morbi et placerat sapien. Ut vitae lorem nec enim lobortis euismod. Phasellus iaculis, dui non varius efficitur, sem urna euismod erat, sit amet euismod justo magna eu magna. Morbi ut auctor diam, nec sollicitudin sapien. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sollicitudin mauris erat, sit amet ultricies turpis sollicitudin ut. Curabitur tellus lacus, vulputate vel aliquam in, tempus porttitor urna. Aenean ultrices tristique massa nec finibus. Praesent vehicula sapien vitae lorem malesuada, posuere ullamcorper quam volutpat. Morbi nec arcu sodales, interdum metus quis, pellentesque lectus. Proin et tincidunt arcu, eu dignissim odio.</p>            
+            <div class="clr"></div>
+        </article>
+        <div class="justify-center content">
+            <h3>Contact Information</h3>
+            <div class="contact-box"> 
+                <img src="images/preston_map-323w.jpg" alt="map">               
+                <div>                    
+                    <table id="contact">
+                        <caption>Elementary Weather</caption>
+                        <tr>
+                            <td><img src="images/iconmonstr-map-8-32.png" alt="address-icon"></td>
+                            <td>310 N 1st E<br>Preston, ID 83263</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/iconmonstr-email-10-32.png" alt="email-icon"></td>
+                            <td>contactus@elemantaryweather.com</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/iconmonstr-phone-8-32.png" alt="phone-icon"></td>
+                            <td>999.999.9999</td>
+                        </tr>
+                    </table>
+                    <ul id="social">
+                        <li><a href="#"><img src="images/iconmonstr-facebook-4-64.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/iconmonstr-instagram-14-64.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="images/iconmonstr-twitter-4-64.png" alt="twitter"></a></li>
+                        <li><a href="#"><img src="images/iconmonstr-pinterest-1-64.png" alt="pintrest"></a></li>
+                        <li><a href="#"><img src="images/iconmonstr-google-plus-4-64.png" alt="google plus"></a></li>
+                    </ul>  
+                </div>                 
+            </div>         
+        </div>
+    </main>
+    <footer class="content">
+        <div class="justify bar center-text">
+            <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a href="https://www.byui.edu/online" target="_blank" rel="noreferrer">BYUI Online Learning</a>
+               <br><span id="lastUpdated" class="lastUpdated"></span>
+            </p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/windchill.js"></script>
+</body>
+
+</html>

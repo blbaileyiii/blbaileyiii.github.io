@@ -1,0 +1,9 @@
+@media only screen and (min-width: 90em){
+    #five-day-flex {
+        font-size: 2em;
+    }
+
+    #five-day-flex li {
+        padding: 1em;
+    }
+}

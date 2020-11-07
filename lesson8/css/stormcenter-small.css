@@ -1,0 +1,50 @@
+#stormCenter * {
+    display: flex;
+    flex-direction: column;
+}
+
+[type="submit"] {
+    align-self: stretch;
+    align-items: center;
+    background-color: #CF5C36;
+    color: #FFFFFF;
+    padding: 1em;
+    font-size: 1.25em;
+}
+
+#stormCenter .form-box.radio * {
+    display: inline-block;
+}
+
+#stormCenter datalist {
+    display: none;
+}
+
+.form-box {
+    margin: 1rem;
+}
+
+input[type="date" i] {
+    align-items: start;
+    flex-direction: row !important;
+}
+
+#userInDangerYNM {
+    position:relative;
+    padding: 1.1em 0 0 0;
+    border: 0;
+}
+
+#userInDangerYNM > label {
+    margin-right: 0.5em;
+}
+
+#userInDangerYNM legend {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+label * {
+    margin: 0.2rem 0;
+}

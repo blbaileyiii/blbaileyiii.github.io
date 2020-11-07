@@ -1,0 +1,10 @@
+.thanks {
+    box-shadow: 4px 4px 5px 1px #CF5C36;
+    background: #F2F5DE;
+    border: 8px double #CF5C36;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    letter-spacing: 1px;
+}

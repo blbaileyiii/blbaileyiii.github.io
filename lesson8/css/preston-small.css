@@ -1,0 +1,103 @@
+.weather-summary-box {
+    position: static;    
+}
+
+.weather-summary {
+    position: static;    
+    background: #f2f5dec7;
+}
+
+.weather-summary-table {
+    margin: 1em 2em;     
+    padding-bottom: 1em;       
+}
+
+.weather-summary-table tr td:nth-child(odd){
+    font-size: 1.25em;
+    text-align: right;
+    padding: 0.25em;
+}
+
+.weather-summary-table tr td:nth-child(even){
+    font-size: 1.1em;
+}
+
+#hero-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#five-day-flex, #contact, #social{
+    list-style: none;
+}
+
+#five-day-flex {
+    display: flex;
+    text-align: center;
+    padding: 0;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+#five-day-flex li {
+    margin: 0.25em;
+    border: 2px solid #4C8577;
+}
+
+#social {
+    display: none;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-box > img {
+    order: 2;
+    max-width: 100%;
+    align-self: center;
+    margin: 1em 2em 2em;    
+}
+
+.contact-box div {
+    order: 1;
+}
+
+#contact {
+    font-size: 1.3em;
+    table-layout:fixed
+}
+
+#contact caption {
+    text-align: left;
+    font-size: 1.25em;    
+    padding-bottom: 0.25em;
+}
+
+#contact img {
+    padding: 0.25em;
+}
+
+#contact td {
+    word-wrap:break-word;
+}
+
+article {
+    padding-top: 0.25em;
+}
+
+article h4{
+    padding: 0em 1em;
+}
+
+article p, article h4{
+    padding: 0em 1em 1em;
+}
+
+article img {
+    float: none;
+    margin: 1.5em;
+    border: 8px double #47B6FF;
+}
