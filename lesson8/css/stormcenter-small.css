@@ -24,7 +24,7 @@
     margin: 1rem;
 }
 
-input[type="date" i] {
+input[type="date"] {
     align-items: start;
     flex-direction: row !important;
 }
