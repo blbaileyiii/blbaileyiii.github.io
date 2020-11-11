@@ -1,0 +1,62 @@
+html {
+    background: #22181c;
+    color: #efe6dd;
+}
+
+header, footer{
+    text-align: center;
+    font-family: "Cinzel";
+}
+
+.cards {
+    margin: 1rem auto;
+    width: 90vw;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Cards */
+section {
+    background: #5a0001;
+    text-align: center;
+    border: 1px solid #a30003;
+    margin: 0 auto;
+    padding: 0.5em;
+    width: 85vw;
+    font-family: "Raleway";
+}
+
+section > h2 {
+    font-family: "Cinzel";
+}
+
+section > img {
+    max-width: 100%;
+    box-shadow: 0 0 20px 5px #22181c;
+}
+
+@media only screen and (min-width: 500px) {
+    section {
+        width: 450px;        
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;    
+    }
+
+    section {
+        margin: 0;  
+    }
+
+@media only screen and (min-width: 1250px) {
+    .cards {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    section {
+        width: 20vw;
+}
