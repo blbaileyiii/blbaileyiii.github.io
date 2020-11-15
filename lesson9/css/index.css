@@ -1,9 +1,13 @@
+.cards {
+    margin: 2.5rem 0 0 0;
+}
+
 .cards section {
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     box-shadow: 4px 4px 5px 1px #4C8577;
-    margin: 1rem 0;
+    margin: 2.5rem 0;
     border: 1px solid #4C8577;
 }
 
@@ -29,7 +33,7 @@
 @media only screen and (min-width: 530px) { 
     .cards section {
         width: 512px;
-        margin: 1rem auto;
+        margin: 2.5rem auto;
     }
 }
 
