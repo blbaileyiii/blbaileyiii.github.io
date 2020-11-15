@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css"> 
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/stormcenter.css">
+    <title>Elementary Weather</title>
+    <meta name="description"
+        content="To help users plan trips according to the weather.">
+</head>
+
+<body>
+    <aside class="banner-friday center-text">
+        <p>Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</p>
+    </aside>
+    <header>
+        <div class="justify-center header-box">
+            <img    src="images/iconfinder_weather256w.png"    
+                    sizes="(max-width: 90em) 128px, (min-width: 90em) 256px"
+                    srcset="images/iconfinder_weather128w.png 128w,
+                            images/iconfinder_weather256w.png 256w"
+                    alt="site-logo">
+            <div class="center-text">
+                <h1 class="shadow header-h1">Elementary Weather</h1>
+                <div class="header-div">Easy to Read - Easy to Plan</div>
+            </div>
+        </div>        
+    </header>
+    <nav>
+        <ul class="justify-center navigation">
+            <li><a class="ham" id="toggleMenu" href="#">☰ Menu</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="#" id="active">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>        
+    </nav>
+    <main>
+        <h2 class="content header">Storm Center</h2> 
+        <form id="stormCenter" action="thanks.html" method="get">
+            <div class="form-box">
+                <label for="fullName">
+                    Full Name*
+                    <input type="text" id="fullName" name="fullName" placeholder="Full Name" pattern="^[a-zA-Z ]{5,}$" required>
+                </label>
+            </div>
+
+            <div class="form-box">
+                <label for="email">
+                    Email
+                    <input type="email" id="email" name="email" placeholder="someone@someplace.com">
+                </label>
+            </div>
+
+            <div class="form-box">
+                <label>
+                    Telephone*
+                    <input type="tel" id="telephone" name="telephone" placeholder="Phone Number" required>
+                </label>
+            </div>
+
+            <div class="form-box">
+                <label for="zip">
+                    Zip*
+                    <input type="number" id="zip" name="zip" placeholder="XXXXX" required>
+                </label>
+            </div>
+
+            <div class="form-box">
+                <label for="stormDate">
+                    Storm Date
+                    <input type="date" id="stormDate" name="stormDate">
+                </label>
+            </div>
+
+            <div class="form-box">
+                <label for="stormType">
+                    Storm Type
+                    <input list="stormTypes" id="stormType" name="stormType" placeholder="Tsunami">
+                    <datalist id="stormTypes">
+                        <option value="Flash Flood">
+                        <option value="Hail">
+                        <option value="Hurricane">
+                        <option value="Thunderstorm">
+                        <option value="Tornado">
+                    </datalist>
+                </label>                
+            </div>
+
+            <div class="form-box">
+                <label for="stormSeverity" id="lblStormSeverity"><span id="spanStormSeverity">Storm Severity: 0</span>
+                    <input type="range" id="stormSeverity" name="stormSeverity" min="0" max="10" step="1" value="0" oninput="adjStormSeverity(this.value)" onchange="adjStormSeverity(this.value)">
+                </label>
+            </div>
+
+            <div class="form-box">
+                <label for="stormRegion">
+                    Storm Region
+                    <select id="stormRegion" name="stormRegion">
+                        <option value="" selected disabled>Select Region ...</option>
+                        <option value="preston">Preston</option>
+                        <option value="sodaSprings">Soda Springs</option>
+                        <option value="fishHaven">Fish Haven</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-box radio">
+                <fieldset id=userInDangerYNM>
+                    <legend>Are You In Danger?</legend>
+                    <label for="userInDangerY">
+                        <input type="radio" id="userInDangerY" name="userInDanger" value="yes">
+                        Yes
+                    </label>                    
+                    <label for="userInDangerN">
+                        <input type="radio" id="userInDangerN" name="userInDanger" value="no">
+                        No
+                    </label>
+                    <label for="userInDangerM">
+                        <input type="radio" id="userInDangerM" name="userInDanger" value="maybe">
+                        Maybe
+                    </label>
+                </fieldset>
+                
+            </div>
+
+            <div class="form-box">
+                <label for="comments">
+                    Comments
+                    <textarea id="comments" name="comments" placeholder="Comments"></textarea>
+                </label>
+            </div>
+            
+            <div class="form-box">
+                <input type="submit" id="sumbit" name="submit" value="Send Your Weather Report">
+            </div>
+            
+        </form>
+    </main>
+    <footer class="content">
+        <div class="justify bar center-text">
+            <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a href="https://www.byui.edu/online" target="_blank" rel="noreferrer">BYUI Online Learning</a>
+               <br><span id="lastUpdated" class="lastUpdated"></span>
+            </p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
