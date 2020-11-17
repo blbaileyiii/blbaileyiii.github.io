@@ -17,7 +17,7 @@ switch(file) {
         break;
 }
 
-let apiURL = "http://api.openweathermap.org/data/2.5/weather?id=" + id + "&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
+let apiURL = "https://api.openweathermap.org/data/2.5/weather?id=" + id + "&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
 const apiIconURL = "https://openweathermap.org/img/w/"
 
 fetch(apiURL)
@@ -57,7 +57,7 @@ fetch(apiURL)
     }
   });
 
-apiURL = "http://api.openweathermap.org/data/2.5/forecast?id=" + id + "&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
+apiURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + id + "&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
 
   fetch(apiURL)
   .then((response) => response.json())
