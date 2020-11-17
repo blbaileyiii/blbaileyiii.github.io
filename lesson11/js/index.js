@@ -37,6 +37,7 @@ fetch(requestURL)
 
             card.appendChild(div);
             card.appendChild(img);
+            card.addEventListener("click", function() { window.location = myTowns[i].photo.split(".")[0] + ".html";}, false)
 
             document.querySelector('div.cards').appendChild(card);
         }
