@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css"> 
     <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sodasprings.css">
     <title>Elementary Weather</title>
     <meta name="description"
         content="To help users plan trips according to the weather.">
 </head>
 
 <body>
-    <aside class="banner-friday center-text">
-        <p>Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</p>
-    </aside>
     <header>
         <div class="justify-center header-box">
             <img    src="images/iconfinder_weather256w.png"    
@@ -32,29 +29,59 @@
     <nav>
         <ul class="justify-center navigation">
             <li><a class="ham" id="toggleMenu" href="#">☰ Menu</a></li>
-            <li><a href="index.html" id="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="preston.html">Preston</a></li>
-            <li><a href="#">Soda Springs</a></li>
-            <li><a href="#">Fish Haven</a></li>
+            <li><a href="sodasprings.html" id="active">Soda Springs</a></li>
+            <li><a href="fishhaven.html">Fish Haven</a></li>
             <li><a href="stormcenter.html">Storm Center</a></li>
             <li><a href="gallery.html">Gallery</a></li>
         </ul>        
     </nav>
     <main>
-        <h2 class="content header">Home</h2>
-        <img    id="hero-img" class="justify-center"
-                    src="images/pexels-julius-silver-753626-1800w.webp"
+        <h2 class="content">Soda Springs Idaho</h2>        
+        <div class="justify-center content weather-summary-box">            
+            <img    id="hero-img" class="justify-center"
+                    src="images/pexels-helena-lopes-1389339-1800w.webp"
                     sizes="100vw"
-                    srcset="images/pexels-julius-silver-753626-800w.webp 800w,
-                            images/pexels-julius-silver-753626-1280w.webp 1280w,
-                            images/pexels-julius-silver-753626-1800w.webp 1800w"
+                    srcset="images/pexels-helena-lopes-1389339-800w.webp 800w,
+                            images/pexels-helena-lopes-1389339-1280w.webp 1280w,
+                            images/pexels-helena-lopes-1389339-1800w.webp 1800w"
                     alt="hero">
-        <div class="cards"></div>
+            <div class="weather-summary">
+                <h3>Weather Summary</h3>
+                <table class="weather-summary-table">
+                    <tr>
+                        <td>Currently:</td>
+                        <td id="weather-summary-desc"></td>
+                    </tr>
+                    <tr>
+                        <td>High:</td>
+                        <td id="weather-summary-temp"></td>
+                    </tr>
+                    <tr>
+                        <td>Wind Speed:</td>
+                        <td id="weather-summary-windspeed"></td>
+                    </tr>
+                    <tr>
+                        <td>Wind Chill:</td>
+                        <td id="weather-summary-windchill"></td>
+                    </tr>
+                    <tr>
+                        <td>Humidity:</td>
+                        <td id="weather-summary-humidity"></td>
+                    </tr>                    
+                </table>
+            </div>            
+        </div>
+        <div class="justify-center content five-day">
+            <h3>Five Day Forecast</h3>
+            <ul id="five-day-flex" class="justify-center"></ul>
+        </div>
         <article class="justify-center content article">
             <div class="center-text">
-                <img src="images/pexels-brett-sayles-3027217-400w.webp" alt="article">
+                <img src="images/pexels-lisa-fotios-730256-400w.webp" alt="article">
             </div>            
-            <h3>Balloon Festival</h3>
+            <h3>Founder's Day</h3>
             <h4>B L Bailey III</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo eu ante vitae sollicitudin. Nullam malesuada urna lectus, non luctus metus iaculis at. Cras pulvinar felis non pulvinar volutpat. Quisque id lacus eget augue pulvinar hendrerit. Aliquam gravida ipsum justo, nec malesuada leo imperdiet nec. Morbi et placerat sapien. Ut vitae lorem nec enim lobortis euismod. Phasellus iaculis, dui non varius efficitur, sem urna euismod erat, sit amet euismod justo magna eu magna. Morbi ut auctor diam, nec sollicitudin sapien. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sollicitudin mauris erat, sit amet ultricies turpis sollicitudin ut. Curabitur tellus lacus, vulputate vel aliquam in, tempus porttitor urna. Aenean ultrices tristique massa nec finibus. Praesent vehicula sapien vitae lorem malesuada, posuere ullamcorper quam volutpat. Morbi nec arcu sodales, interdum metus quis, pellentesque lectus. Proin et tincidunt arcu, eu dignissim odio.</p>            
             <div class="clr"></div>
@@ -92,15 +119,14 @@
     </main>
     <footer class="content">
         <div class="justify bar center-text">
-            <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a href="https://www.byui.edu/online" target="_blank" rel="noreferrer">BYUI Online Learning</a>
+            <p>&copy; <span id="currYear"></span> | Bernard L. Bailey III | California | <a href="https://www.byui.edu/online" target="_blank" rel="noreferrer">BYUI Online Learning</a> | <a href="https://openweathermap.org" target="_blank" rel="noreferrer">OpenWeatherMap API</a>
                <br><span id="lastUpdated" class="lastUpdated"></span>
-               <br><a href="home-wireframes.html" target="_blank" rel="noreferrer">Wireframes</a>
             </p>
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script src="js/js.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/js.js"></script>    
+    <script src="js/weatherapi.js"></script>
 </body>
 
 </html>

@@ -25,9 +25,9 @@ fetch(requestURL)
             img.alt = myTowns[i].name + " weather photo.";
             img.className = "town-img";
             motto.textContent = myTowns[i].motto;
-            yearFounded.innerHTML = "<span>Year Founded:</span>" + myTowns[i].yearFounded;
-            currentPopulation.innerHTML = "<span>Population:</span>" + myTowns[i].currentPopulation;
-            averageRainfall.innerHTML = "<span>Annual Rain Fall:</span>" + myTowns[i].averageRainfall;
+            yearFounded.innerHTML = "<span>Year Founded: </span>" + myTowns[i].yearFounded;
+            currentPopulation.innerHTML = "<span>Population: </span>" + myTowns[i].currentPopulation;
+            averageRainfall.innerHTML = "<span>Annual Rain Fall: </span>" + myTowns[i].averageRainfall;
             
             div.appendChild(h3);
             div.appendChild(motto);

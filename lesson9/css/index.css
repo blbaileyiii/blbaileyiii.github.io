@@ -28,6 +28,11 @@
 
 .town-content h4 {
     font-style: italic;
+    font-size: 1.15rem;
+}
+
+.town-content span {
+    font-size: 1.15rem;
 }
 
 @media only screen and (min-width: 530px) { 

@@ -1,0 +1,25 @@
+.thanks {
+    box-shadow: 4px 4px 5px 1px #CF5C36;
+    background: #F2F5DE;
+    border: 8px double #CF5C36;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 60em) {
+
+    .thanks {
+        width: 60vw;
+        margin: 1em auto;
+    }
+
+}
+
+@media only screen and (min-width: 90em){
+    .thanks {
+        font-size: 1.25em;
+    }
+}
