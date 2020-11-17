@@ -32,11 +32,12 @@ fetch(apiURL)
         document.getElementById('icon').src = iconsrc;
         document.getElementById('icon').alt = desc;
     } else {
-        let temp = parseFloat(jsObject.main.temp_max);
+        let temp = parseFloat(jsObject.main.temp);
         let windspeed = parseFloat(jsObject.wind.speed);
 
-        document.getElementById('weather-summary-desc').textContent = jsObject.weather[0].description;
-        document.getElementById('weather-summary-temp').textContent = temp + "°F";
+        document.getElementById('weather-summary-temp').textContent = temp + "°F"
+        document.getElementById('weather-summary-desc').textContent =  jsObject.weather[0].description;
+        document.getElementById('weather-summary-temp_max').textContent = jsObject.main.temp_max + "°F";
         document.getElementById('weather-summary-windspeed').textContent = windspeed +" mph";
         document.getElementById('weather-summary-humidity').textContent = jsObject.main.humidity + "%";
 
