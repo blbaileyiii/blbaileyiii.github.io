@@ -23,7 +23,7 @@ const apiIconURL = "https://openweathermap.org/img/w/"
 fetch(apiURL)
   .then((response) => response.json())
   .then((jsObject) => {
-    console.log(jsObject);
+    //console.log(jsObject);
     let iconsrc = apiIconURL + jsObject.weather[0].icon + ".png";
     let desc = jsObject.weather[0].description;
 
@@ -58,10 +58,10 @@ apiURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + id + "&units=i
   fetch(apiURL)
   .then((response) => response.json())
   .then((fiveDays) => {
-    console.log(fiveDays);
+    //console.log(fiveDays);
 
     const fiveDaysAt1800 = fiveDays.list.filter(entry => new Date(entry.dt_txt).getHours() == 18 );
-    console.log(fiveDaysAt1800);
+    //console.log(fiveDaysAt1800);
 
     for (i = 0; i < fiveDaysAt1800.length; i++) {
         let li = document.createElement('li');
