@@ -59,6 +59,10 @@ aside {
 
 nav {
     background-color: #47B6FF;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .navigation {
