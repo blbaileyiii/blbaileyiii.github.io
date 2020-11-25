@@ -120,7 +120,7 @@ article img {
 
 #social {
     display: none;
-    padding: 0;
+    padding: 0.25em;
 }
 
 .contact-box {
@@ -148,7 +148,7 @@ article img {
 #contact caption {
     text-align: left;
     font-size: 1.25em;    
-    padding-bottom: 0.25em;
+    padding: 0.25em;
 }
 
 #contact img {
