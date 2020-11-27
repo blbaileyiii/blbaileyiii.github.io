@@ -98,7 +98,7 @@ fetch(apiURL)
         return response.json();
     })
     .then(function (jsonObject) {
-        console.table(jsonObject);
+        //console.table(jsonObject);
         const towns = jsonObject['towns'];
         const myTowns = towns.filter(town => (town.name == townName));
         for (let i = 0; i < myTowns.length; i++ ) {
