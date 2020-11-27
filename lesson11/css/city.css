@@ -40,6 +40,80 @@
     margin: 0 1rem;
 }
 
+#town-events section {
+    box-shadow: 4px 4px 5px 1px #4C8577;
+    margin: 2.5rem 0;
+}
+
+#town-events h3 {
+    margin: 0;
+}
+
+#town-events ul{
+    list-style: none;
+    padding: 1rem;
+}
+
+#town-events li {
+    margin: 0.5rem;
+}
+
+#town-details section {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;  
+    box-shadow: 4px 4px 5px 1px #4C8577;
+    margin: 2.5rem 0;
+    border: 1px solid #4C8577;
+}
+
+.town-img {
+    max-width: 100%;
+    margin: 1rem auto;
+    border: 1px solid #4C8577;
+}
+
+.town-content > * {
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.town-header {
+    margin: 0;
+    padding: 1rem;
+    text-align: left;
+}
+
+.town-content h4 {
+    font-style: italic;
+    font-size: 1.15rem;
+}
+
+.town-content span {
+    font-size: 1.15rem;
+}
+
+@media only screen and (min-width: 50em) {
+    #town-details section {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "content image";
+    }
+
+    .town-img {
+        grid-area: image;
+        border-width: 0 0 0 1px;
+        border-style: solid;
+        border-color: #4C8577;
+        margin: auto;
+    }
+    
+    .town-content > * {
+        grid-area: content;
+    }
+
+}
+
 @media only screen and (min-width: 60em) {
     .weather-summary-box {
         position: relative;
@@ -66,5 +140,9 @@
 
     #five-day-flex img {
         margin: 2.75rem;
+    }
+
+    .town-content > * {
+        text-align: left;
     }
 }

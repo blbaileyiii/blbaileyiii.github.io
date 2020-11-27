@@ -2,22 +2,28 @@ const daysAbv = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
 
 let file = document.documentURI.split(/[/.]/g).slice(-2,-1).toString();
 let id;
+let townName;
 switch(file) {
     case "sodasprings":
-        id = "5607916"
+        id = "id=5607916";
+        townName = "Soda Springs";
         break;
     case "fishhaven":
-        id = "5585010"
+        //id = "5585010"
+        id = "lat=42.0380399&lon=-111.4048681";
+        townName = "Fish Haven"
         break;
     case "preston":
-        id = "5604473"
+        id = "id=5604473";
+        townName = "Preston"
         break;
     default:
-        id = "5604473"
+        id = "id=5604473"
+        townName = "Preston"
         break;
 }
 
-let apiURL = "https://api.openweathermap.org/data/2.5/weather?id=" + id + "&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
+let apiURL = "https://api.openweathermap.org/data/2.5/weather?" + id + "&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
 const apiIconURL = "https://openweathermap.org/img/w/"
 
 fetch(apiURL)
@@ -53,46 +59,101 @@ fetch(apiURL)
     
   });
 
-apiURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + id + "&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
+apiURL = "https://api.openweathermap.org/data/2.5/forecast?" + id + "&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
 
-  fetch(apiURL)
-  .then((response) => response.json())
-  .then((fiveDays) => {
-    //console.log(fiveDays);
+fetch(apiURL)
+.then((response) => response.json())
+.then((fiveDays) => {
+  //console.log(fiveDays);
 
-    const fiveDaysAt1800 = fiveDays.list.filter(entry => new Date(entry.dt_txt).getHours() == 18 );
-    //console.log(fiveDaysAt1800);
+  const fiveDaysAt1800 = fiveDays.list.filter(entry => new Date(entry.dt_txt).getHours() == 18 );
+  //console.log(fiveDaysAt1800);
 
-    for (i = 0; i < fiveDaysAt1800.length; i++) {
-        let li = document.createElement('li');
-        let day = document.createElement('p');
-        let icon = document.createElement('img');
-        let temp = document.createElement('p');
+  for (i = 0; i < fiveDaysAt1800.length; i++) {
+      let li = document.createElement('li');
+      let day = document.createElement('p');
+      let icon = document.createElement('img');
+      let temp = document.createElement('p');
 
-        let date = new Date(fiveDaysAt1800[i].dt_txt);
-        day.textContent = daysAbv[date.getDay()];
+      let date = new Date(fiveDaysAt1800[i].dt_txt);
+      day.textContent = daysAbv[date.getDay()];
 
-        icon.src = apiIconURL + fiveDaysAt1800[i].weather[0].icon + ".png";
-        icon.alt = fiveDaysAt1800[i].weather[0].description;
+      icon.src = apiIconURL + fiveDaysAt1800[i].weather[0].icon + ".png";
+      icon.alt = fiveDaysAt1800[i].weather[0].description;
 
-        temp.textContent = fiveDaysAt1800[i].main.temp + "°F";
+      temp.textContent = fiveDaysAt1800[i].main.temp + "°F";
 
-        li.append(day);
-        li.append(icon);
-        li.append(temp);
+      li.append(day);
+      li.append(icon);
+      li.append(temp);
 
-        document.getElementById('five-day-flex').appendChild(li);
+      document.getElementById('five-day-flex').appendChild(li);
+  }
+});
 
-    }
+apiURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
-    
+fetch(apiURL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (jsonObject) {
+        console.table(jsonObject);
+        const towns = jsonObject['towns'];
+        const myTowns = towns.filter(town => (town.name == townName));
+        for (let i = 0; i < myTowns.length; i++ ) {
+            let card = document.createElement('section');
+            let div = document.createElement('div');
+            let h3 = document.createElement('h3');
+            let img = document.createElement('img');
+            let motto = document.createElement('h4');
+            let yearFounded = document.createElement('p');
+            let currentPopulation = document.createElement('p');
+            let averageRainfall = document.createElement('p');
 
+            div.className = "town-content";
+            h3.textContent = "Town Details";
+            h3.className = "town-header";
+            img.src = "images/" + myTowns[i].photo;
+            img.alt = myTowns[i].name + " weather photo.";
+            img.className = "town-img";
+            motto.textContent = myTowns[i].motto;
+            yearFounded.innerHTML = "<span>Year Founded: </span>" + myTowns[i].yearFounded;
+            currentPopulation.innerHTML = "<span>Population: </span>" + myTowns[i].currentPopulation;
+            averageRainfall.innerHTML = "<span>Annual Rain Fall: </span>" + myTowns[i].averageRainfall;
+            
+            div.appendChild(h3);
+            div.appendChild(motto);
+            div.appendChild(yearFounded);
+            div.appendChild(currentPopulation);
+            div.appendChild(averageRainfall);
 
-    
+            card.appendChild(div);
+            card.appendChild(img);
+            
+            document.getElementById('town-details').appendChild(card);
 
+            let eventcard = document.createElement('section');
+            let eventdiv = document.createElement('div');
+            let eventh3 = document.createElement('h3');
+            let eventul = document.createElement('ul');
 
+            eventh3.textContent = "Events"
 
-  });
+            for (let ii = 0; ii < myTowns[i].events.length; ii++) {
+              let eventli = document.createElement('li');
+              eventli.textContent = myTowns[i].events[ii];
+              eventul.appendChild(eventli);
+            }
+
+            eventdiv.appendChild(eventh3);
+            eventdiv.appendChild(eventul)
+
+            eventcard.appendChild(eventdiv);
+
+            document.getElementById('town-events').appendChild(eventcard);
+        }
+    });
   
 
 
