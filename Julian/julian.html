@@ -17,6 +17,7 @@
     }
     fieldset {
       margin: 2rem 0;
+      border: 3pt solid #ff4a1c;
       background: #D7F75B;
       color: #392F5A;
     }
@@ -29,15 +30,17 @@
     .input {
       border: 3pt double #392F5A;
       font-size: larger;
+      margin: 1rem;     
+      padding: 0.75rem; 
     }
     .output {
-      border: 3pt double #ff4a1c;
+      border: 3pt double #392F5A;     
+      margin: 1rem;
+    }
+    .output div {
       background: #392F5A;
       color: #ffffff;    
-      font-size: larger;  
-    }
-    div {
-      margin: 1rem;     
+      font-size: larger;            
       padding: 0.75rem; 
     }
   </style>
@@ -53,7 +56,9 @@
           <label for="date">Date: </label><input type="date" id="date" onchange="updateJulianDateSpan();">
         </div>        
         <div class="output">
-          <label>Julian Date: </label><span id="julianDateSpan"></span>
+          <div>
+            <label>Julian Date: </label><span id="julianDateSpan"></span>
+          </div>
         </div>
       </fieldset>
       <fieldset>
@@ -62,7 +67,9 @@
           <label for="julianDate">Julian Date: </label><input type="text" id="julianDate" pattern="[0-9]{4}.[0-9]{3}" onchange="updateDateSpan();">
         </div>        
         <div class="output">
-          <label>Date: </label><span id="dateSpan"></span>
+          <div>
+            <label>Date: </label><span id="dateSpan"></span>
+          </div>          
         </div>
       </fieldset>          
   </main>
