@@ -2,18 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    fieldset {
-      margin: 2rem 0;
-    }
-    div {
-      margin: 1rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Julian Date Calculator</title>
   <meta name="description"
     content="Julian Date Converter">
+  <style>
+    html {
+      background: #392F5A;
+      color: #FFFFFF;
+    }
+    body {
+      width: 50vw;
+      margin: 0 auto;
+    }
+    fieldset {
+      margin: 2rem 0;
+      background: #D7F75B;
+      color: #392F5A;
+    }
+    legend {
+      background: #ff4a1c;
+      color: #ffffff;
+      font-size: larger;
+      padding: 0.75rem;
+    }
+    .input {
+      border: 3pt double #392F5A;
+      font-size: larger;
+    }
+    .output {
+      background: #392F5A;
+      color: #ffffff;    
+      font-size: larger;  
+    }
+    div {
+      margin: 1rem;     
+      padding: 0.75rem; 
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,25 +48,23 @@
   <main>
       <fieldset>
         <legend>Date to Julian Date</legend>
-        <div>
+        <div class="input">
           <label for="date">Date: </label><input type="date" id="date" onchange="updateJulianDateSpan();">
         </div>        
-        <div>
-          Julian Date: <span id="julianDateSpan"></span>
+        <div class="output">
+          <label>Julian Date: </label><span id="julianDateSpan"></span>
         </div>
       </fieldset>
       <fieldset>
         <legend>Julian Date to Date</legend>
-        <div>
+        <div class="input"> 
           <label for="julianDate">Julian Date: </label><input type="text" id="julianDate" pattern="[0-9]{4}.[0-9]{3}" onchange="updateDateSpan();">
         </div>        
-        <div>
-          Date: <span id="dateSpan"></span>
+        <div class="output">
+          <label>Date: </label><span id="dateSpan"></span>
         </div>
       </fieldset>          
   </main>
-  <footer>    
-  </footer>
   <script>
     const datePicker = document.getElementById("date");
     const julianDateSpan = document.getElementById("julianDateSpan");
