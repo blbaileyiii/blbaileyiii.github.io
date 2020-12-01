@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/julian.css">
+  <style>
+    fieldset {
+      margin: 2rem 0;
+    }
+    div {
+      margin: 1rem;
+    }
+  </style>
   <title>Julian Date Calculator</title>
   <meta name="description"
     content="Julian Date Converter">
@@ -13,29 +20,71 @@
     <h1>Julian Date Calculator</h1>
   </header>
   <main>
-      <label>Date:</label><input id="date" type="date" onchange="dateChanged();">
-      <p>Julian Date: <span id="julianDate"></span></p>      
+      <fieldset>
+        <legend>Date to Julian Date</legend>
+        <div>
+          <label for="date">Date: </label><input type="date" id="date" onchange="updateJulianDateSpan();">
+        </div>        
+        <div>
+          Julian Date: <span id="julianDateSpan"></span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Julian Date to Date</legend>
+        <div>
+          <label for="julianDate">Julian Date: </label><input type="text" id="julianDate" pattern="[0-9]{4}.[0-9]{3}" onchange="updateDateSpan();">
+        </div>        
+        <div>
+          Date: <span id="dateSpan"></span>
+        </div>
+      </fieldset>          
   </main>
   <footer>    
   </footer>
   <script>
     const datePicker = document.getElementById("date");
-    const julianDateSpan = document.getElementById("julianDate");
+    const julianDateSpan = document.getElementById("julianDateSpan");
+    const jDatePicker = document.getElementById("julianDate");
+    const dateSpan = document.getElementById("dateSpan");
 
     const today = new Date();
 
     datePicker.defaultValue = today.getFullYear() + "-" + ("0" + (today.getMonth() + 1)).slice(-2) + "-" + ("0" + today.getDate()).slice(-2);
-    dateChanged();
+    updateJulianDateSpan()
 
+    jDatePicker.defaultValue = date2Julian();
+    jDatePicker.placeholder = date2Julian();
+    updateDateSpan()
 
-    function dateChanged(){
+    function updateJulianDateSpan() {
+      julianDateSpan.textContent = date2Julian();
+    }
+
+    function date2Julian(){
         let date = new Date(datePicker.value+"T00:00:00");
         
         let dateMs = date.getTime();
         let dec31Ms = new Date(date.getFullYear() - 1, 11, 31, 23, 59, 59, 999).getTime();
 
-        julianDateSpan.textContent = date.getFullYear() + "." + ("00" + Math.ceil((dateMs - dec31Ms) / 86400000)).slice(-3);
-        //julianDateSpan.textContent = date;
+        return date.getFullYear() + "." + ("00" + Math.ceil((dateMs - dec31Ms) / 86400000)).slice(-3);
+    }
+
+    function updateDateSpan() {
+      dateSpan.textContent = julian2Date();
+    }
+
+    function julian2Date(){
+      let julianDate = jDatePicker.value;
+      let parseJulianDate = julianDate.split(".");
+      let year = parseInt(parseJulianDate[0]);
+      let day = parseInt(parseJulianDate[1]);
+
+      let dec31Ms = new Date(year - 1, 11, 31, 23, 59, 59, 999).getTime();
+      let julianMs = day * 86400000;
+
+      let date = new Date(dec31Ms + julianMs)
+
+      return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
     }
   </script>
 </body>
