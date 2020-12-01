@@ -116,7 +116,7 @@
 
       let date = new Date(dec31Ms + julianMs)
 
-      return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+      return ("0" + (date.getMonth() + 1)).slice(-2) + "/" + ("0" + date.getDate()).slice(-2) + "/" + date.getFullYear();
     }
   </script>
 </body>
