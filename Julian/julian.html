@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/julian.css">
+  <title>Julian Date Calculator</title>
+  <meta name="description"
+    content="Julian Date Converter">
+</head>
+<body>
+  <header>
+    <h1>Julian Date Calculator</h1>
+  </header>
+  <main>
+      <label>Date:</label><input id="date" type="date" onchange="dateChanged();">
+      <p>Julian Date: <span id="julianDate"></span></p>      
+  </main>
+  <footer>    
+  </footer>
+  <script>
+    const datePicker = document.getElementById("date");
+    const julianDateSpan = document.getElementById("julianDate");
+
+    const today = new Date();
+
+    datePicker.defaultValue = today.getFullYear() + "-" + ("0" + (today.getMonth() + 1)).slice(-2) + "-" + ("0" + today.getDate()).slice(-2);
+    dateChanged();
+
+
+    function dateChanged(){
+        let date = new Date(datePicker.value+"T00:00:00");
+        
+        let dateMs = date.getTime();
+        let dec31Ms = new Date(date.getFullYear() - 1, 11, 31, 23, 59, 59, 999).getTime();
+
+        julianDateSpan.textContent = date.getFullYear() + "." + ("00" + Math.ceil((dateMs - dec31Ms) / 86400000)).slice(-3);
+        //julianDateSpan.textContent = date;
+    }
+  </script>
+</body>
+</html>
