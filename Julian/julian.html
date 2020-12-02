@@ -101,23 +101,23 @@
     }
 
     function date2Julian(){
-        // Adds T00:00:00 to the date picker string. This forces the Date function to return in local time.
-        let date = new Date(datePicker.value+"T00:00:00");
-        
-        // Convert the given date to milliseconds.
-        let dateMs = date.getTime();
+      // Adds T00:00:00 to the date picker string. This forces the Date function to return in local time.
+      let date = new Date(datePicker.value+"T00:00:00");
+      
+      // Convert the given date to milliseconds.
+      let dateMs = date.getTime();
 
-        // Get the milliseconds value for December 31 23:59:999 for the year prior to the given date.
-        let dec31Ms = new Date(date.getFullYear() - 1, 11, 31, 23, 59, 59, 999).getTime();
+      // Get the milliseconds value for December 31 23:59:999 for the year prior to the given date.
+      let dec31Ms = new Date(date.getFullYear() - 1, 11, 31, 23, 59, 59, 999).getTime();
 
-        // Julian date returned in format yyyy.ddd where ddd is the number of days since the first
-        // Example: 12/01/2020 becomes 2020.336 in a leap year.
-        // The calculation follows this concept:
-        // # of Milliseconds to the date picker minus # of Milliseconds to December 31 23:59:999 of the year before the date picker.
-        // That gives only the milliseconds within the current year. Take that and divide it by 86400000 (the number of milliseconds in a day).
-        // That returns the number of days since the beginning of the year, or the julian date. 
-        // However, you have to round it up (ceil fx). Because even a millisecond into a new day is a new date.
-        return date.getFullYear() + "." + ("00" + Math.ceil((dateMs - dec31Ms) / 86400000)).slice(-3);
+      // Julian date returned in format yyyy.ddd where ddd is the number of days since the first
+      // Example: 12/01/2020 becomes 2020.336 in a leap year.
+      // The calculation follows this concept:
+      // # of Milliseconds to the date picker minus # of Milliseconds to December 31 23:59:999 of the year before the date picker.
+      // That gives only the milliseconds within the current year. Take that and divide it by 86400000 (the number of milliseconds in a day).
+      // That returns the number of days since the beginning of the year, or the julian date. 
+      // However, you have to round it up (ceil fx). Because even a millisecond into a new day is a new date.
+      return date.getFullYear() + "." + ("00" + Math.ceil((dateMs - dec31Ms) / 86400000)).slice(-3);
     }   
 
     function julian2Date(){
