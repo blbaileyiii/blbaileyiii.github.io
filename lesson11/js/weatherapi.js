@@ -24,7 +24,7 @@ switch(file) {
 }
 
 let apiURL = "https://api.openweathermap.org/data/2.5/weather?" + id + "&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
-const apiIconURL = "https://openweathermap.org/img/w/"
+const apiIconURL = "https://openweathermap.org/img/wn/"
 
 fetch(apiURL)
   .then((response) => response.json())
@@ -78,7 +78,7 @@ fetch(apiURL)
       let date = new Date(fiveDaysAt1800[i].dt_txt);
       day.textContent = daysAbv[date.getDay()];
 
-      icon.src = apiIconURL + fiveDaysAt1800[i].weather[0].icon + ".png";
+      icon.src = apiIconURL + fiveDaysAt1800[i].weather[0].icon + "@2x.png";
       icon.alt = fiveDaysAt1800[i].weather[0].description;
 
       temp.textContent = fiveDaysAt1800[i].main.temp + "°F";
