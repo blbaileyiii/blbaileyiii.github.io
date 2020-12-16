@@ -1,0 +1,267 @@
+html {
+    font-family: "Andika";
+    background: #FFF4EB;
+    color: #201D1F;
+}
+
+.alert {
+    background: #FFF4EB;
+    border: 8px double #F9627D;
+    display:grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "event x"
+        "description description"
+
+}
+
+#event {
+    background: #F9627D;
+    color: #FFFFFF;
+    grid-area: event;
+    font-size: 1.25rem;
+    font-family: "Federo";
+    padding: 0.5rem 0.75rem;
+}
+
+.closebtn {
+    background: #F9627D;
+    color: #FFFFFF;
+    grid-area: x;
+    font-size: 2rem;
+    padding: 0 0.75rem;
+}
+
+#description {
+    grid-area: description;
+    padding: 0.75rem;
+}
+
+.content > div {
+    background: #ffffffcb;
+    border: 8px double #00d8e0;
+    border-radius: 5px;;
+    box-shadow: 8px 8px 8px #647fa6;
+}
+
+.nav.head h1 {
+    background:#FFF4EB;
+    padding: 0;
+}
+
+.scoots {
+    font-family: "Sansita Swashed";
+    font-weight: 600;    
+}
+
+.barcode {
+    font-family: "Libre Barcode 39 Extended Text";
+}
+
+h1, h2, h3, h4 {
+    font-family: "Federo";
+    margin: 0;
+    background: #00d8e0;
+    padding: 0.75rem 1.5rem;
+}
+
+.paralax.content {    
+    min-height: auto;
+    padding: 2rem 0;
+}
+
+nav {
+    font-family: "Chewy";       
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+}
+
+.navigation {
+    background: #67F4DA;
+    text-align: center;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.nav.head, .nav.item.ham {
+    display: block;
+}
+
+.nav.item {
+    display: none;    
+}
+
+.reservation {
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.button {
+    background: #82E748;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: large;
+    text-align: center;;
+}
+
+.responsive .nav.item {
+    display: block;
+}
+
+a, nav a:visited {
+    color: #201D1F;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem 1.5rem;
+}
+
+.nav.item a:hover, a.active, a.active:visited {
+    color: #FFFFFF;
+    background-color: #F9627D;
+}
+
+.li-logo {
+    background: url("../images/alex-mustaros-68opR6XoL9U-unsplash-1800w.webp") no-repeat scroll center;
+    background-size: cover;
+}
+
+.nav.head {
+    background: #FFF4EB;
+}
+
+.weather {
+    background: #ffffffaf;
+}
+
+.weather div {
+    margin: 1rem;
+}
+
+.weather img {
+    background: #647fa6;
+    border-radius: 15px;
+    margin: 4px 0 0 0;
+}
+
+.weather ul {
+    list-style: none;
+}
+
+#weather-current {
+    padding: 0;
+    margin:0;
+}
+
+#weather-current li {
+    margin: 0.5rem;
+}
+
+#weather-three-day {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin:0;
+}
+
+#weather-three-day ul {
+    padding: 0;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+}
+
+
+
+@media only screen and (min-width: 25em) {
+    .nav.item {
+        font-size: x-large;
+    }    
+
+    .paralax.content {
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    .weather {    
+        display: flex;
+        justify-content: space-between;    
+    }
+
+    .content-small > div {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav.head h1 {
+        background:#67F4DA;
+    }
+
+    .nav.item {
+        display: block;    
+    }
+
+    .nav.item.ham {
+        display: none;
+    }
+
+    .li-logo {
+        background: #67F4DA;
+        position: relative;  
+    }
+
+    .nav.head {
+        background: #67F4DA;
+    }
+
+    .li-logo div {
+        width: 150px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 0;
+        top: -93px;
+    }
+
+    .paralax.small {
+        min-height: 70px;
+    }
+
+    nav {
+        top: 0;
+    }
+    
+    .paralax {
+        background-image: url("../images/alex-mustaros-68opR6XoL9U-unsplash-1800w.webp");
+        min-height: 150px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .reservation {
+        text-align: right;
+    }
+}

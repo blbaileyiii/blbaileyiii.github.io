@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>~Scoots</title>
+    <meta name="description"
+        content="Scoots is a motor scooter rental company located on the island of Cozumel, Mexico near Playa del Carmen-Cozumel Ferry dock and Terminal Puerta Maya. Reserve Scooters, ATVs, and Jeeps and enjoy touring the Island of Cozumel when you arrive. Walk-ins welcome while rentals last.">
+</head>
+<body>
+    <aside id="alert" class="alert hidden">
+        <div id="event" onclick="document.getElementById('description').classList.toggle('hidden');"></div>
+        <div class="closebtn" onclick="this.parentElement.style.display='none';">&times;</div>
+        <div id="description" class="hidden">LEe</div>
+    </aside>    
+    <nav>
+        <div class="paralax small">
+            <div class="reservation">
+                <a href="reservations.html" class="button">Make a Reservation Today!</a>
+            </div>
+        </div>
+        <ul class="navigation">
+            <li class="li-logo"><div>&nbsp;</div><a href="#" class="logo"><img src="images/scooter-155654-150w.webp" alt="~scoots logo image"></a></li>
+            <li class="nav head"><a href="#"><h1><span class="scoots">~Scoots</span></h1></a></li>
+            <li class="nav item ham"><a class="ham" id="toggleMenu" href="#">☰ Menu</a></li>
+            <li class="nav item"><a  href="#" class="active">Home</a></li>
+            <li class="nav item"><a href="rentals.html">Rentals</a></li>
+            <li class="nav item"><a href="reservations.html">Reservations</a></li>
+            <li class="nav item"><a href="tours.html">Tours</a></li>
+            <li class="nav item"><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="paralax small"></div>        
+    </nav>
+    <main>
+        <div class="paralax content content-small">
+            <div>
+                <h3>Weather Summary</h3>
+                <div class="weather">
+                    <div>
+                        <h4>Current Weather</h4>
+                        <ul id="weather-current">
+                            <li>Currently: <span id="weather-current-temp"></span> w/<span id="weather-current-desc"></span></li>
+                            <li>Wind Speed: <span id="weather-current-windspeed"></span></li>
+                            <li>Wind Chill: <span id="weather-current-windchill"></span></li>
+                            <li>Humidity: <span id="weather-current-humidity"></span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Three-Day Forecast</h4>
+                        <ul id="weather-three-day"></ul>
+                    </div>
+                    
+                    
+                </div>  
+            </div>          
+        </div>
+        <div class="paralax"></div>
+        <div class="services"></div>
+        <div class="paralax"></div>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; <span id="currYear"></span> <span class="scoots">~Scoots</span> | Mexico | <a href="attribution.html">Attributions</a>
+                <br><span id="lastUpdated" class="lastUpdated"></span>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/weatherapi.js"></script>
+</body>
+
+</html>
