@@ -7,7 +7,7 @@ const apiIconURL = "https://openweathermap.org/img/wn/"
 fetch(apiURL)
   .then((response) => response.json())
   .then((jsObject) => {
-    console.log(jsObject);
+    //console.table(jsObject);
 
     let curr = jsObject.current;
     let daily = jsObject.daily;

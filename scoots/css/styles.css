@@ -41,8 +41,12 @@ html {
 .content > div {
     background: #ffffffcb;
     border: 8px double #00d8e0;
-    border-radius: 5px;;
+    border-radius: 5px;
     box-shadow: 8px 8px 8px #647fa6;
+}
+
+.header-text {
+    margin: 1rem 2rem;
 }
 
 .nav.head h1 {
@@ -66,9 +70,19 @@ h1, h2, h3, h4 {
     padding: 0.75rem 1.5rem;
 }
 
+h5 {
+    font-family: "Federo";
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
 .paralax.content {    
     min-height: auto;
     padding: 2rem 0;
+}
+
+.paralax.divider {
+    display: none;
 }
 
 nav {
@@ -98,10 +112,24 @@ nav {
     text-align: center;
 }
 
+.center {
+    text-align: center;;
+}
+
+.social {
+    display: none;
+}
+
 .button {
+    border: 3px double #82E748;
+    border-radius: 8px;
+    display: block;
+}
+
+.button > a {
     background: #82E748;
     display: inline-block;
-    border-radius: 8px;
+    border-radius: 4px;
     font-size: large;
     text-align: center;;
 }
@@ -110,15 +138,16 @@ nav {
     display: block;
 }
 
-a, nav a:visited {
+a, .nav a:visited, .button a:visited {
     color: #201D1F;
 }
 
-nav a {
+.nav a, .button a {
     text-decoration: none;
     display: block;
     padding: 1rem 1.5rem;
 }
+
 
 .nav.item a:hover, a.active, a.active:visited {
     color: #FFFFFF;
@@ -126,7 +155,7 @@ nav a {
 }
 
 .li-logo {
-    background: url("../images/alex-mustaros-68opR6XoL9U-unsplash-1800w.webp") no-repeat scroll center;
+    background: url("../images/alex-mustaros-68opR6XoL9U-unsplash-400w.webp") no-repeat scroll center;
     background-size: cover;
 }
 
@@ -140,6 +169,18 @@ nav a {
 
 .weather div {
     margin: 1rem;
+}
+
+.card > div{
+    margin: 1rem;
+}
+
+.card-item {
+    border: 2px solid #00d8e0;
+}
+
+.card-item > *{
+    margin: 1rem 0;    
 }
 
 .weather img {
@@ -175,6 +216,10 @@ nav a {
     margin: 0.5rem;
 }
 
+.card img {
+    max-width: 100%;
+}
+
 .hidden {
     display: none;
 }
@@ -183,7 +228,26 @@ footer {
     text-align: center;
 }
 
+.gmap iframe {
+    width: 100%;
+    height: 100%;
+}
 
+address section{
+    margin-bottom: 1rem;
+}
+
+address h4{
+    margin-bottom: 1rem;
+}
+
+.card-item > *{
+    margin: 1rem;
+}
+
+.text {
+    margin-bottom: 1rem;
+}
 
 @media only screen and (min-width: 25em) {
     .nav.item {
@@ -193,6 +257,15 @@ footer {
     .paralax.content {
         padding: 1rem 2rem;
     }
+
+    .gmap iframe {
+        height: 300px;
+    }
+
+    .li-logo {
+        background: url("../images/alex-mustaros-68opR6XoL9U-unsplash-700w.webp") no-repeat scroll center;
+    }
+
 }
 
 @media only screen and (min-width: 40em) {
@@ -204,6 +277,26 @@ footer {
     .content-small > div {
         display: inline-block;
     }
+
+    .card-item.map {
+        display: flex;
+        justify-content: center;
+    }   
+
+    
+
+    .gmap, address {    
+        width: 300px;
+    }
+
+    .gmap iframe {
+        width: 100%;
+    }
+
+    .li-logo {
+        background: url("../images/alex-mustaros-68opR6XoL9U-unsplash-1000w.webp") no-repeat scroll center;
+    }
+
 }
 
 @media only screen and (min-width: 60em) {
@@ -248,13 +341,19 @@ footer {
         min-height: 70px;
     }
 
+    .paralax.divider {
+        border-top: 4px solid #67F4DA;
+        min-height: auto;
+        display: block;    
+    }
+
     nav {
         top: 0;
     }
     
     .paralax {
         background-image: url("../images/alex-mustaros-68opR6XoL9U-unsplash-1800w.webp");
-        min-height: 150px;
+        min-height: 100px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -262,6 +361,28 @@ footer {
     }
 
     .reservation {
-        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .social {
+        display: inline-block;
+        margin: 0 2rem 0 0;
+    }
+
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-text {
+        color: #82E748;
+        margin: 0rem 2rem;
+    }
+
+    .hidden-big {
+        display: none;
     }
 }

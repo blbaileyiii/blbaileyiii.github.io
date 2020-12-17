@@ -13,12 +13,25 @@
     <aside id="alert" class="alert hidden">
         <div id="event" onclick="document.getElementById('description').classList.toggle('hidden');"></div>
         <div class="closebtn" onclick="this.parentElement.style.display='none';">&times;</div>
-        <div id="description" class="hidden">LEe</div>
+        <div id="description" class="hidden"></div>
     </aside>    
     <nav>
-        <div class="paralax small">
-            <div class="reservation">
-                <a href="reservations.html" class="button">Make a Reservation Today!</a>
+        <div class="paralax small">            
+            <div class="reservation hidden">
+                <div class="header-text">
+                    Hours of Operation: 7:00 am - 9:00 pm EST (Mon - Sun)<br>
+                    Call us:  +011 +52 999-999-9999                    
+                </div>
+                <div class="social">
+                    <a href="http://www.facebook.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Facebook_svg_5282541.webp" alt="facebook icon"></a>
+                    <a href="http://www.twitter.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Twitter5_svg_5282551.webp" alt="twitter icon"></a>
+                    <a href="http://www.youtube.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Youtube3_svg_5282548.webp" alt="youtube icon"></a>
+                    <a href="http://www.snapchat.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Snapchat_svg_5282553.webp" alt="snapchat icon"></a>
+                    <a href="http://www.instagram.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Instagram_svg_5282544.webp" alt="instagram icon"></a>
+                </div>
+                <div class="button">
+                    <a href="reservations.html">Make a Reservation Today!</a>
+                </div>                
             </div>
         </div>
         <ul class="navigation">
@@ -31,7 +44,25 @@
             <li class="nav item"><a href="tours.html">Tours</a></li>
             <li class="nav item"><a href="contact.html">Contact Us</a></li>
         </ul>
-        <div class="paralax small"></div>        
+        <div class="paralax small">
+            <div class="reservation hidden-big">
+                <div class="header-text">
+                    Hours of Operation: 7:00 am - 9:00 pm EST (Mon - Sun)<br>
+                    Call us:  +011 +52 999-999-9999                   
+                </div>
+                <div class="social">
+                    <a href="http://www.facebook.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Facebook_svg_5282541.webp" alt="facebook icon"></a>
+                    <a href="http://www.twitter.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Twitter5_svg_5282551.webp" alt="twitter icon"></a>
+                    <a href="http://www.youtube.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Youtube3_svg_5282548.webp" alt="youtube icon"></a>
+                    <a href="http://www.snapchat.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Snapchat_svg_5282553.webp" alt="snapchat icon"></a>
+                    <a href="http://www.instagram.com" target="_blank" rel="noreferrer"><img src="images/iconfinder_Rounded_Instagram_svg_5282544.webp" alt="instagram icon"></a>
+                </div>
+                <div class="button">
+                    <a href="reservations.html">Make a Reservation Today!</a>
+                </div>                
+            </div>
+        </div>
+        <div class="paralax divider"> </div>        
     </nav>
     <main>
         <div class="paralax content content-small">
@@ -57,18 +88,86 @@
             </div>          
         </div>
         <div class="paralax"></div>
-        <div class="services"></div>
+        <div class="paralax content services">
+            <div>
+                <h3>Services</h3>
+                <div id="services" class="card">
+                </div>
+            </div>
+        </div>
+        <div class="paralax"></div>
+        <div class="paralax content contact">
+            <div>
+                <h3>Contact</h3>
+                <div class="card">
+                    <div class="card-item map">
+                        <div class="gmap">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.2208618413019!2d-86.95009497078742!3d20.511003655227984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e59cee123b051%3A0xade22f7c23f964b7!2sAv%20Lic%20Benito%20Ju%C3%A1rez%205%2C%20Centro%2C%2077600%20San%20Miguel%20de%20Cozumel%2C%20Q.R.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1608219464651!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        <address>
+                            <section>
+                                <h4><span class="scoots">~Scoots</span> Locale #1</h4>
+                            </section>
+                            <section>
+                               <h4>Phone</h4>
+                               <div class="text">
+                                    Office: +011 +52 999-999-9999<br>
+                                    Fax: +011 +52 777-777-7777<br>
+                                    Text: +011 +52 888-888-8888<br>
+                                    Email: ask@scoots.com
+                               </div>
+                            </section>
+                            <section>
+                                <h4>Address</h4>
+                                <div class="text">
+                                    Av Lic Benito Juárez 5, Centro, 77600<br>
+                                    San Miguel de Cozumel, Q.R., Mexico<br>
+                                    ~Near Playa del Carmen Ferry Dock                                    
+                                </div>
+                            </section>
+                        </address>
+                    </div>
+                    <div class="card-item map">
+                        <div class="gmap">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d555.6154299971008!2d-86.97348733793908!3d20.476682707165544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e5748a503f14b%3A0x702c665a071b27db!2zMjDCsDI4JzM1LjUiTiA4NsKwNTgnMjIuMyJX!5e0!3m2!1sen!2sus!4v1608220054782!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        <address>
+                            <section>
+                                <h4><span class="scoots">~Scoots</span> Locale #1</h4>
+                            </section>
+                            <section>
+                                <h4>Phone</h4>
+                                Office: +011 +52 555-555-5555<br>
+                                Fax: +011 +52 333-333-3333<br>
+                                Text: +011 +52 9 444-444-4444<br>
+                                Email: ask@scoots.com
+                            </section>
+                            <section>
+                                <h4>Address</h4>
+                                <span class="scoots">~Scoots</span> Locale #2<br>
+                                77600 Quintana Roo, Mexico<br>
+                                ~Near Terminal Puerta Maya<br>
+                                (Puerta Maya Cruise Ship Terminal)
+                            </section>
+                        </address>
+                    </div>
+                </div>                
+            </div>            
+        </div>
         <div class="paralax"></div>
     </main>
     <footer>
         <div>
-            <p>&copy; <span id="currYear"></span> <span class="scoots">~Scoots</span> | Mexico | <a href="attribution.html">Attributions</a>
+            <p>
+                &copy; <span id="currYear"></span> <span class="scoots">~Scoots</span> | Mexico | <a href="attribution.html">Attributions</a>
                 <br><span id="lastUpdated" class="lastUpdated"></span>
+            </p>
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="js/js.js"></script>
-    <script src="js/weatherapi.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/vehicles.js"></script>
 </body>
 
 </html>
