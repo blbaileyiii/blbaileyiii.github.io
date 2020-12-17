@@ -89,6 +89,7 @@ nav {
     font-family: "Chewy";       
     position: -webkit-sticky; /* Safari */
     position: sticky;
+    z-index: 2;
 }
 
 .navigation {
@@ -249,6 +250,13 @@ address h4{
     margin-bottom: 1rem;
 }
 
+.overlay-parent {
+    text-align: center;
+    font-family: "Chewy";    
+    color: #F9627D;
+    font-size: 2rem;
+}
+
 @media only screen and (min-width: 25em) {
     .nav.item {
         font-size: x-large;
@@ -264,6 +272,20 @@ address h4{
 
     .li-logo {
         background: url("../images/alex-mustaros-68opR6XoL9U-unsplash-700w.webp") no-repeat scroll center;
+    }
+
+    .overlay-parent {
+        font-size: 2.5rem;
+        position: relative;
+        display:inline-block;
+        z-index: 1;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 6px;
+        right: -20px;    
+        transform: rotate(7deg);        
     }
 
 }

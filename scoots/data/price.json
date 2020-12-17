@@ -5,21 +5,7 @@
             "defaultImg": "honda_dio_200w.webp",
             "model": [
                 {
-                    "type": "~Honda Metro Scooter",
-                    "maxPersons": 1,
-                    "booking": [
-                        {
-                            "half": 20,
-                            "full": 30
-                        },
-                        {
-                            "half": 25,
-                            "full": 35
-                        }
-                    ]
-                },
-                {
-                    "type": "~Honda Dio Scooter",
+                    "type": "Honda Dio Scooter",
                     "maxPersons": 2,
                     "booking": [
                         {
@@ -33,7 +19,21 @@
                     ]
                 },
                 {
-                    "type": "~Honda PCX150 Scooter",
+                    "type": "Honda Metro Scooter",
+                    "maxPersons": 1,
+                    "booking": [
+                        {
+                            "half": 20,
+                            "full": 30
+                        },
+                        {
+                            "half": 25,
+                            "full": 35
+                        }
+                    ]
+                },                
+                {
+                    "type": "Honda PCX150 Scooter",
                     "maxPersons": 2,
                     "booking": [
                         {
@@ -73,7 +73,7 @@
             "defaultImg": "jeep_islander_200w.webp",
             "model": [
                 {
-                    "type": "Jeep Wrangler - 4 door with A/C",
+                    "type": "Jeep Wrangler - 4 door w/ A/C",
                     "maxPersons": 5,
                     "booking": [
                         {
