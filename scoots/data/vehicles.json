@@ -7,6 +7,8 @@
                 {
                     "type": "Honda Dio Scooter",
                     "maxPersons": 2,
+                    "power": "110cc",
+                    "defaultImg": "honda_dio_200w.webp",
                     "booking": [
                         {
                             "half": 30,
@@ -21,6 +23,8 @@
                 {
                     "type": "Honda Metro Scooter",
                     "maxPersons": 1,
+                    "power": "49cc",
+                    "defaultImg": "metropolitan-200w.webp",
                     "booking": [
                         {
                             "half": 20,
@@ -35,6 +39,8 @@
                 {
                     "type": "Honda PCX150 Scooter",
                     "maxPersons": 2,
+                    "power": "149cc",
+                    "defaultImg": "pcx150x-200w.webp",
                     "booking": [
                         {
                             "half": 40,
@@ -53,8 +59,9 @@
             "defaultImg": "honda_pioneer_200w.webp",
             "model": [
                 {
-                    "type": "Honda Pinoeer ATV",
+                    "type": "Honda Pinoeer 1000 ATV",
                     "maxPersons": 4,
+                    "defaultImg": "honda_pioneer_200w.webp",
                     "booking": [
                         {
                             "half": 50,
@@ -73,22 +80,10 @@
             "defaultImg": "jeep_islander_200w.webp",
             "model": [
                 {
-                    "type": "Jeep Wrangler - 4 door w/ A/C",
-                    "maxPersons": 5,
-                    "booking": [
-                        {
-                            "half": 70,
-                            "full": 100
-                        },
-                        {
-                            "half": 85,
-                            "full": 125
-                        }
-                    ]
-                },
-                {
-                    "type": "Jeep Wrangler - 2 door"
-                    ,"maxPersons": 4,
+                    "type": "Jeep Wrangler - 2 Door",
+                    "maxPersons": 4,
+                    "details": ["Manual Transmition", "Open Air Cooling"],
+                    "defaultImg": "jeep_islander_200w.webp",
                     "booking": [
                         {
                             "half": 60,
@@ -99,7 +94,23 @@
                             "full": 90
                         }
                     ]
-                }
+                },
+                {
+                    "type": "Jeep Wrangler - 4 Door",
+                    "maxPersons": 5,
+                    "details": ["Manual Transmition", "A/C"],
+                    "defaultImg": "jeepWrangler4doorRubicon-200w.webp",
+                    "booking": [
+                        {
+                            "half": 70,
+                            "full": 100
+                        },
+                        {
+                            "half": 85,
+                            "full": 125
+                        }
+                    ]
+                }                
             ]
         }
     ]

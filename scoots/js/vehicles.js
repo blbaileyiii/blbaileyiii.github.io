@@ -1,4 +1,4 @@
-const requestURL = 'data/price.json';
+const requestURL = 'data/vehicles.json';
 
 function mainServices() {
     fetch(requestURL)
@@ -6,7 +6,7 @@ function mainServices() {
         return response.json();
     })
     .then(function (jsonObject) {
-        console.table(jsonObject);
+        //console.table(jsonObject);
         
         const vehicles = jsonObject['vehicles'];
 
@@ -40,19 +40,21 @@ function mainServices() {
             img.src = "images/" + vehicles[i].defaultImg;
             img.alt = vehicles[i].type;
 
-            divOverlay.textContent = "$" + vehicles[i].model[0].booking[0].full;
+            divOverlay.innerHTML = "$" + vehicles[i].model[0].booking[0].full + "<sup>*</sup>";
 
             divTxt.innerHTML = "<h5>Models:</h5>";
             for (let ii in vehicles[i].model) {
-                divTxt.innerHTML += vehicles[i].model[ii].type + "<br>";
+                divTxt.innerHTML += vehicles[i].model[ii].type + "<br>";                
             }
 
             for (let iii = vehicles[i].model.length; iii < spacer ; iii++) {
                 divTxt.innerHTML += "<br>";
             }
 
-            a.href = "reservation.html";
-            a.textContent = "Reserve your " + vehicles[i].type + " today!";
+            divTxt.innerHTML += "<sub>*Price based on " + vehicles[i].model[0].type + "<br>" + "&nbsp;".repeat(2) + "Full Day Rental w/Reservation</sub>"
+
+            a.href = "rentals.html#" + vehicles[i].type;
+            a.textContent = "Explore our " + vehicles[i].type + "s";
 
             
 
@@ -74,5 +76,132 @@ function mainServices() {
             document.getElementById("services").append(cardItem);
         }
         
+    });
+}
+
+function rentalServices() {
+    fetch(requestURL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (jsonObject) {
+        //console.table(jsonObject);
+        
+        const vehicles = jsonObject['vehicles'];
+
+        let table = document.createElement('table');
+        let caption = document.createElement('caption');
+        let thr1 = document.createElement('tr');
+        let thr2 = document.createElement('tr');
+
+        caption.textContent = "Max Persons and Price Chart (Includes Tax)";
+        thr1.innerHTML = "<td colspan='2'></td><td colspan='2'>Reservation</td><td colspan='2'>Walk-In</td>";
+        thr2.innerHTML = "<td>Rental Type</td><td>Max. Persons</td><td>Half-Day<br>(3 Hrs)</td><td>Full Day</td><td>Half-Day<br>(3 Hrs)</td><td>Full Day</td>";
+
+        table.append(caption);
+        table.append(thr1);
+        table.append(thr2);
+
+        for (let i in vehicles) {
+            for (let ii in vehicles[i].model) {
+
+                let cardItem = document.createElement('div');
+                let h4 = document.createElement('h4');
+                let div = document.createElement('div');
+                let img = document.createElement('img');
+                let divImg = document.createElement('div');
+                let divOverlayP = document.createElement('div');
+                let divOverlay = document.createElement('div');
+                let divTxt = document.createElement('div');
+                let divBtn = document.createElement('div');
+                let aBtn = document.createElement('a'); 
+                let tr = document.createElement('tr');
+
+                cardItem.classList.add('card-item');
+                divImg.classList.add('center');
+                divOverlayP.classList.add('overlay-parent')
+                divOverlay.classList.add('overlay');
+                divTxt.classList.add('text');
+                divBtn.classList.add('button');
+
+                if( ii == 0) {
+                    h4.id = vehicles[i].type;
+                }
+
+                h4.innerHTML = vehicles[i].model[ii].type;
+
+                let maxCap = vehicles[i].model[ii].maxPersons;
+
+                tr.innerHTML  = "<td>" + vehicles[i].model[ii].type + "</td><td>" + maxCap + "</td><td>" +  "$" + vehicles[i].model[ii].booking[0].half + "</td><td>" + "$" + vehicles[i].model[ii].booking[0].full + "</td><td>" + "$" + vehicles[i].model[ii].booking[1].half + "</td><td>" + "$" + vehicles[i].model[ii].booking[1].full + "</td>";
+
+                img.src = "images/" + vehicles[i].model[ii].defaultImg;
+                img.alt = vehicles[i].model[ii].type;
+
+                divOverlay.innerHTML = "$" + vehicles[i].model[ii].booking[0].full + "<sup>*</sup>";
+
+                divTxt.innerHTML = "<h5>Reservation Pricing:</h5>";
+                divTxt.innerHTML += "$" + vehicles[i].model[ii].booking[0].half + " - Half Day(3 hour) Rental<br>";
+                divTxt.innerHTML += "$" + vehicles[i].model[ii].booking[0].full + " - Full Day Rental*<br>";           
+
+                divTxt.innerHTML += "<h5>Walk-in Pricing:</h5>";
+                divTxt.innerHTML += "$" + vehicles[i].model[ii].booking[1].half + " - Half Day(3 hour) Rental<br>";
+                divTxt.innerHTML += "$" + vehicles[i].model[ii].booking[1].full + " - Full Day Rental<br>"; 
+
+                divTxt.innerHTML += "<h5>Details:</h5>";
+                divTxt.innerHTML += vehicles[i].model[ii].type + "<br>";     
+
+                if (vehicles[i].model[ii].power != null) {
+                    divTxt.innerHTML += "Power: " + vehicles[i].model[ii].power + "<br>";
+                }
+                if ( maxCap > 1) {
+                    divTxt.innerHTML += "Max. Capacity: " + maxCap + " People<br>";
+                } else {
+                    divTxt.innerHTML += "Max. Capacity: " + maxCap + " Person<br>";
+                }
+                if (vehicles[i].model[ii].details != null) {
+                    divTxt.innerHTML += "Additional Features:<br>"
+                    for (let iii in vehicles[i].model[ii].details) {
+                        if (iii == 0) {
+                            divTxt.innerHTML += "&nbsp;".repeat(9) + vehicles[i].model[ii].details[iii] + "<br>"
+                        } else {
+                            divTxt.innerHTML += "&nbsp;".repeat(9) + vehicles[i].model[ii].details[iii] + "<br>"
+                        }
+                    }                    
+                }
+                
+                divTxt.innerHTML += "<sub>*Price based on " + vehicles[i].model[ii].type + "<br>" + "&nbsp;".repeat(2) + "Full Day Rental w/Reservation</sub>"
+
+                aBtn.href = "reservations.html?type=" + vehicles[i].model[ii].type;
+                aBtn.textContent = "Reserve " + vehicles[i].model[ii].type
+
+                divBtn.append(aBtn);  
+
+                divImg.append(divOverlayP);
+
+                divOverlayP.append(img);
+                divOverlayP.append(divOverlay);
+
+                div.append(divImg);
+                div.append(divTxt);
+                div.append(divBtn);
+
+
+                cardItem.append(h4);
+                cardItem.append(div);
+
+                table.append(tr);
+
+                document.getElementById("rentals").append(cardItem);
+            }
+        }
+
+        document.getElementById("rentalTable").append(table);
+
+        if (window.location.hash) {
+            var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+            var hashEl = document.getElementById(hash);
+            hashEl.scrollIntoView(true);
+            window.scrollBy(0, -250);
+        }        
     });
 }

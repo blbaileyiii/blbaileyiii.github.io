@@ -1,7 +1,6 @@
 const daysAbv = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
 
 let apiURL = "https://api.openweathermap.org/data/2.5/onecall?lat=20.5083&lon=-86.9458&exclude=minutely,hourly&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb";
-//let apiURL ="https://api.openweathermap.org/data/2.5/onecall?lat=42.6526&lon=-73.7562&exclude=minutely,hourly&units=imperial&appid=61c06afff8be57bc36e4e0cf4f4020bb"
 const apiIconURL = "https://openweathermap.org/img/wn/"
 
 fetch(apiURL)

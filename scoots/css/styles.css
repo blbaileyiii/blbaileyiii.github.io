@@ -16,6 +16,26 @@ html {
 
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem; 
+}
+
+form > * {
+    margin: 0.25rem;
+    border-color: #00D8E0
+}
+
+form textarea {
+    height: 10em;
+}
+
+.button button {    
+    width: 100%;
+    padding: 1rem 1.5rem;
+}
+
 #event {
     background: #F9627D;
     color: #FFFFFF;
@@ -40,9 +60,9 @@ html {
 
 .content > div {
     background: #ffffffcb;
-    border: 8px double #00d8e0;
+    border: 8px double #00D8E0;
     border-radius: 5px;
-    box-shadow: 8px 8px 8px #647fa6;
+    box-shadow: 8px 8px 8px #6480A6;
 }
 
 .header-text {
@@ -66,7 +86,7 @@ html {
 h1, h2, h3, h4 {
     font-family: "Federo";
     margin: 0;
-    background: #00d8e0;
+    background: #00D8E0;
     padding: 0.75rem 1.5rem;
 }
 
@@ -125,14 +145,16 @@ nav {
     border: 3px double #82E748;
     border-radius: 8px;
     display: block;
+    font-family: "Chewy"; 
 }
 
-.button > a {
+.button > a, .button button {
     background: #82E748;
     display: inline-block;
     border-radius: 4px;
     font-size: large;
-    text-align: center;;
+    text-align: center;
+    border: 0;
 }
 
 .responsive .nav.item {
@@ -177,7 +199,7 @@ a, .nav a:visited, .button a:visited {
 }
 
 .card-item {
-    border: 2px solid #00d8e0;
+    border: 2px solid #00D8E0;
 }
 
 .card-item > *{
@@ -185,7 +207,7 @@ a, .nav a:visited, .button a:visited {
 }
 
 .weather img {
-    background: #647fa6;
+    background: #6480A6;
     border-radius: 15px;
     margin: 4px 0 0 0;
 }
@@ -257,6 +279,31 @@ address h4{
     font-size: 2rem;
 }
 
+.table {
+    display: none;
+}
+
+table {
+    margin: 1rem auto;
+}
+
+table, th, td, caption {
+    border: 2px solid #6480A6;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+tr:nth-child(n+2) td:first-child{
+    text-align: left;
+ }
+
+table > caption {
+    border-bottom: 0;
+    background: #6480A6;
+    color: #FFFFFF;
+}
+
 @media only screen and (min-width: 25em) {
     .nav.item {
         font-size: x-large;
@@ -319,6 +366,10 @@ address h4{
         background: url("../images/alex-mustaros-68opR6XoL9U-unsplash-1000w.webp") no-repeat scroll center;
     }
 
+    .table {
+        display: block;
+    }
+
 }
 
 @media only screen and (min-width: 60em) {
@@ -360,7 +411,7 @@ address h4{
     }
 
     .paralax.small {
-        min-height: 70px;
+        min-height: 55px;
     }
 
     .paralax.divider {
@@ -406,5 +457,9 @@ address h4{
 
     .hidden-big {
         display: none;
+    }
+
+    form {
+        width: 50vw;    
     }
 }
