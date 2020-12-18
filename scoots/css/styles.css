@@ -198,6 +198,17 @@ a, .nav a:visited, .button a:visited {
     margin: 1rem;
 }
 
+.card-item.resize {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.card-item.break {
+    flex-basis: 100%;
+    border: 0;
+    margin: 0;
+}
+
 .card-item {
     border: 2px solid #00D8E0;
 }
@@ -205,6 +216,7 @@ a, .nav a:visited, .button a:visited {
 .card-item > *{
     margin: 1rem 0;    
 }
+
 
 .weather img {
     background: #6480A6;
@@ -370,6 +382,17 @@ table > caption {
         display: block;
     }
 
+}
+
+@media only screen and (min-width: 50em) {
+    .grid {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    
+    .grid h5 {
+        margin: 0;
+    }
 }
 
 @media only screen and (min-width: 60em) {
