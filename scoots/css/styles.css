@@ -96,6 +96,11 @@ h5 {
     margin-bottom: 0.25rem;
 }
 
+label {
+    font-family: "Federo";
+    font-weight: bolder;
+}
+
 .paralax.content {    
     min-height: auto;
     padding: 2rem 0;
