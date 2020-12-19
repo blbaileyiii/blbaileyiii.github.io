@@ -149,8 +149,12 @@ nav {
 .button {
     border: 3px double #82E748;
     border-radius: 8px;
-    display: inline-block;
+    display: block;
     font-family: "Chewy"; 
+}
+
+.button.inline {
+    display: inline-block;
 }
 
 .button > a, .button button {
