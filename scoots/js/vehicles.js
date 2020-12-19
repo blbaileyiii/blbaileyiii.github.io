@@ -303,3 +303,7 @@ function calculateCost() {
         total.value = cost;
     });
 }
+
+function confirm(){
+    
+}

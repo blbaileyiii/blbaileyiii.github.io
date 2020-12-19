@@ -71,7 +71,7 @@
                 <h3>Reservations</h3>
                 <div class="card">
                     <div class="card-item">
-                        <form id="application" action="confirm.html">
+                        <form id="application" action="confirm.html" method="get">
                             <h4>Application</h4>
                             <label for="fname">Name</label>
                             <input name="name" id="fname" placeholder="Full name" required autocomplete="name">
@@ -150,6 +150,27 @@
                             
                             <label for="accomidations">Special Accomidations/Comments:</label>
                             <textarea id="accomidations" name="accomidations"></textarea>
+
+                            <label for="terms"><input id="terms" name="terms" type="checkbox" required> <i>I have read the <a href="termsOfService.html" target="_blank" rel="noreferrer">Terms and Service Agreement</a> and agree.</i></label>
+                            <label for="conditions">
+                                <input id="conditions" name="conditions" type="checkbox" required>
+                                <i>
+                                    I understand the following points:<br>
+                                    <ul>
+                                        
+                                        <li>A $50 security deposit is required to confirm reservations.</li>
+                                        <li>A valid drivers license is required in hand at time of rental.</li>
+                                        <li>No one under 12 years of age are allowed to ride on the scooters.</li>
+                                        <li>Fuel charge not included.</li>
+                                        <li>Unlimited mileage is included.</li>
+                                        <li>Liability insurance is free of charge.</li>
+                                        <li>Reservations rate requires 24 hour prior notification and will be discounted when pickup is made.</li>
+                                        <li>Free delivery to Cozumel hotel, Airbnb, or private residence for 2+ day rentals.</li>
+                                        <li>Payment can be made via Google Pay, cash, credit card, debit card, or PayPal.</li>
+                                        <li>Rentals may be returned to either location.</li>
+                                    </ul>
+                                </i>
+                            </label>
 
                             <input id="total" name="total" type="hidden" value=0>
 
