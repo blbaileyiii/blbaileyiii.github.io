@@ -205,3 +205,105 @@ function rentalServices() {
         }        
     });
 }
+
+function reservation(rentalID) {
+    fetch(requestURL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (jsonObject) {
+        //console.table(jsonObject);
+        
+        const vehicles = jsonObject['vehicles'];
+
+        let vehicleList = document.getElementById(rentalID);
+
+        let optionDefault = document.createElement('option');
+        
+        optionDefault.value = "none";
+        optionDefault.textContent = "Please Select a Rental";
+        optionDefault.selected = true;
+        optionDefault.disabled = true;     
+
+        vehicleList.append(optionDefault);
+
+        for (let i in vehicles) {
+            for (let ii in vehicles[i].model) {
+                let optionItem = document.createElement('option');
+
+                optionItem.value = i + "." + ii;
+                optionItem.textContent = vehicles[i].model[ii].type;
+
+                vehicleList.append(optionItem);
+            }
+        }
+          
+    });
+}
+
+function addRental(addBtn) {
+    //referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+    let rental = addBtn.parentNode.parentNode.previousElementSibling;
+    //console.log(rental);
+    
+    let select = document.createElement('select');
+
+    let iteration = parseInt(rental.id.replace("rental_", "")); 
+    let id = "rental_" + (iteration + 1);  
+
+    select.id = id;
+    select.name = id;
+    select.setAttribute('onchange','calculateCost();');
+    //console.log(select)
+
+    rental.parentNode.insertBefore(select, rental.nextSibling);
+
+    reservation(id);
+    
+}
+
+function removeRental(remBtn) {
+    let rental = remBtn.parentNode.parentNode.previousElementSibling;
+
+    if(rental.id == "rental_0") {
+        // change the selection on the item
+    } else {
+        rental.remove();
+        calculateCost();
+    }
+}
+
+function calculateCost() {
+    fetch(requestURL)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (jsonObject) {
+        //console.table(jsonObject);
+
+        const vehicles = jsonObject['vehicles'];
+
+        let formElements = document.getElementById("application").elements;
+
+        let costDiv = document.getElementById("costDiv")
+
+        let cost = 50.00;
+
+        costDiv.innerHTML = "$50.00 - Security Deposit";
+
+        for (let i = 0; i < formElements.length; i++) {
+            if(formElements[i].id != null && formElements[i].id.substring(0,7) == "rental_") {
+                let rental = formElements[i].value.split(".");
+                let price = vehicles[rental[0]].model[rental[1]].booking[1].full;
+                let vehicle = vehicles[rental[0]].model[rental[1]].type;
+                costDiv.innerHTML += "<br>$" + price + ".00 - " + vehicle;
+                cost += price;
+            }            
+        }
+
+        costDiv.innerHTML += "<br>TOTAL: $" + cost + ".00";
+
+        //for (let i in vehicles) {
+        //    for (let ii in vehicles[i].model) {
+    });
+}

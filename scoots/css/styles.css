@@ -149,7 +149,7 @@ nav {
 .button {
     border: 3px double #82E748;
     border-radius: 8px;
-    display: block;
+    display: inline-block;
     font-family: "Chewy"; 
 }
 
