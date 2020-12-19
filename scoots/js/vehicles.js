@@ -305,5 +305,11 @@ function calculateCost() {
 }
 
 function confirm(){
-    
+    let params = new URLSearchParams(document.location.search.substring(1));
+    let name = params.get("name");
+
+    let confirmationDiv = document.getElementById("confirmation");
+
+    confirmationDiv.textContent = "Thank you " + name + ". Your reservation has been made. We look forward to seeing you in Cozumel."
+
 }
