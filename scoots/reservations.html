@@ -70,68 +70,83 @@
             <div>
                 <h3>Reservations</h3>
                 <div class="card">
-                    <form>
+                    <form action="confirmation.html">
+                        <label for="fname">Name</label>
+                        <input name="name" id="fname" placeholder="Full name" required autocomplete="name">
+
                         <label for="pickupLocation">Pick-up Location: </label>
                         <select id="pickupLocation" class="scoots" name="pickupLocation" required>
                             <option value="none" selected disabled>Please Select a Location</option>
                             <option value="sanMiguel">~Scoots: San Miguel</option>
                             <option value="quintanaRoo">~Scoots: Quintana Roo</option>
                         </select>
+                        
                         <label for="pickupDate">Pick-up Date:</label>
                         <input id="pickupDate" name="pickupDate" type="date" required>
+                        
                         <label for="pickupTime">Pick-up Time: Between 7AM - 9PM</label>
                         <input id="pickupTime" name="pickupTime" type ="time" step="60" value="07:00" min="07:00:00" max="21:00:00" required>
+                        
                         <label for="dropoffLocation">Drop-off Location: </label>
                         <select id="dropoffLocation" class="scoots" name="dropoffLocation" required>
                             <option value="none" selected disabled>Please Select a Location</option>
                             <option value="sanMiguel">~Scoots: San Miguel</option>
                             <option value="quintanaRoo">~Scoots: Quintana Roo</option>
                         </select>
+                        
                         <label for="dropoffDate">Drop-off Date:</label>
                         <input id="dropoffDate" name="dropoffDate" type="date" required>
+                        
                         <label for="dropoffTime">Drop-off Time: Between 7AM - 9PM</label>
                         <input id="dropoffTime" name="dropoffTime" type ="time" step="60" value="07:00" min="07:00:00" max="21:00:00" required>
+                        
                         <label for="rental_0">Rental Type:</label>
                         <select id="rental_0" name="rental_0" required>
                             <option value="none" selected disabled>Please Select a Rental</option>
                             <option value="none">Another Option</option>
                         </select>
-                        <label for="fname">First Name:</label>
-                        <input id="fname" name="fname" type="text" required>
-                        <label for="lname">Last Name:</label>
-                        <input id="lname" name="lname" type="text" required>
-                        <label for="address">Address:</label>
-                        <input id="address" name="address" type="text" autocomplete="address-line1" required>
-                        <label for="state">State:</label>
-                        <input id="state" name="state" type="text" pattern="[A-Za-z]{2}" minlength="2" maxlength="2" required>
-                        <label for="zip">Zip Code:</label>
-                        <input id="zip" name="zip" type="number" minlength="5" maxlength="5" required>
 
                         <label for="frmNameCC">Name on card</label>
-                        <input name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">
+                        <input name="ccname" id="frmNameCC" placeholder="Full Name" autocomplete="cc-name" required>
 
                         <label for="frmCCNum">Card Number</label>
-                        <input name="cardnumber" id="frmCCNum" required autocomplete="cc-number">
+                        <input name="cardnumber" id="frmCCNum" placeholder="#### #### #### ####" autocomplete="cc-number" required>
 
                         <label for="frmCCCVC">CVC</label>
-                        <input name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
+                        <input name="cvc" id="frmCCCVC" autocomplete="cc-csc" required>
 
                         <label for="frmCCExp">Expiry</label>
-                        <input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
+                        <input name="cc-exp" id="frmCCExp" placeholder="MM-YYYY" autocomplete="cc-exp" required>
+                        
+                        <label for="frmAddressS">Address</label>
+                        <input name="ship-address" id="frmAddressS" placeholder="123 Any Street" autocomplete="shipping street-address" required>
+
+                        <label for="frmCityS">City</label>
+                        <input name="ship-city" id="frmCityS" placeholder="New York" autocomplete="shipping locality" required>
+
+                        <label for="frmStateS">State</label>
+                        <input name="ship-state" id="frmStateS" placeholder="NY" autocomplete="shipping region" required>
+
+                        <label for="frmZipS">Zip</label>
+                        <input name="ship-zip" id="frmZipS" placeholder="#####" autocomplete="shipping postal-code" required>
+
+                        <label for="frmCountryS">Country</label>
+                        <input name="ship-country" id="frmCountryS" placeholder="USA" autocomplete="shipping country" required>
+                        
+                        <label for="frmPhoneNumA">Phone</label>
+                        <input type="tel" name="phone" id="frmPhoneNumA" placeholder="+1-650-450-1212" autocomplete="tel" required>
 
 
-
-
-                        <label for="phone">Phone #:</label>
-                        <input id="phone" name="phone" type="tel" required>
-                        <label for="email">Email:</label>
-                        <input id="email" name="email" type="email">
+                        <label for="frmEmailA">Email</label>
+                        <input type="email" name="email" id="frmEmailA" placeholder="from@somewhere.com" autocomplete="email" required>
+                        
                         <label for="cruise">Cruiseline: If Applicable</label>
                         <input id="cruise" name="cruise" type="text">
+                        
                         <label for="accomidations">Special Accomidations/Comments:</label>
                         <textarea id="accomidations" name="accomidations"></textarea>
 
-                        <div class="button"><button type="button" >Make Your Reservation Now</button></div>
+                        <div class="button"><button type="submit" >Make Your Reservation Now</button></div>
                     </form>
                 </div>
             </div>
