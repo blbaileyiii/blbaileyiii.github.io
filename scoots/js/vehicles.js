@@ -279,15 +279,13 @@ function calculateCost() {
         return response.json();
     })
     .then(function (jsonObject) {
-        //console.table(jsonObject);
-
         const vehicles = jsonObject['vehicles'];
 
         let formElements = document.getElementById("application").elements;
-
+        let total = document.getElementById("total");
         let costDiv = document.getElementById("costDiv")
 
-        let cost = 50.00;
+        let cost = 50;
 
         costDiv.innerHTML = "$50.00 - Security Deposit";
 
@@ -302,8 +300,6 @@ function calculateCost() {
         }
 
         costDiv.innerHTML += "<br>TOTAL: $" + cost + ".00";
-
-        //for (let i in vehicles) {
-        //    for (let ii in vehicles[i].model) {
+        total.value = cost;
     });
 }
